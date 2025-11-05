@@ -12,14 +12,13 @@ set DCRM_FINAL_QOR_REPORT ${DESIGN_NAME}.qor.rpt
 set DO_CLOCK_GATING false
 exec rm -rf ${RESULTS_DIR} ${REPORTS_DIR}
 exec mkdir ${RESULTS_DIR} ${REPORTS_DIR}
-
 ##########################################################################################
 #         POR HACER!!!! REVISE QUE ESTAS RUTAS COINCIDAN CON LAS QUE ESTÁ TRABAJANDO
 ##########################################################################################
-set WDIR "/home/synopsys/ie0411/proyecto/WORK" ; #ES NECESARIO MODIFICAR AL HOME USUARIO CORRECTO
+set WDIR "$env(HOME)/ie0411/proyecto/WORK" ; #ES NECESARIO MODIFICAR AL HOME USUARIO CORRECTO
 set TOP ${WDIR}/..
-set verilog_path "/share/synopsys/libs/ie0411/AMBER_ARM_2CORE/verilog"
-set rtl_list_path "/share/synopsys/libs/ie0411/AMBER_ARM_2CORE/scripts/dc/rtl.list"
+set verilog_path "$env(HOME)/ie0411/proyecto/AMBER_ARM_2CORE/verilog"
+set rtl_list_path "$env(HOME)/ie0411/proyecto/AMBER_ARM_2CORE/scripts/dc/rtl.list"
 
 ##########################################################################################
 # VARIABLES DE CONFIGURACIÓN DE LIBRERIA NO MODIFICAR
@@ -237,7 +236,7 @@ foreach_in_coll cell $dont_touch_cells {
 }
 
 # CARGA DE CONSTRAINTS
-source -e -v "/share/synopsys/libs/ie0411/AMBER_ARM_2CORE/scripts/dc/constraints.sdc"
+source -e -v "$env(HOME)/ie0411/projecto/AMBER_ARM_2CORE/scripts/dc/constraints.sdc"
 
 
 compile_ultra -exact_map -no_autoungroup
