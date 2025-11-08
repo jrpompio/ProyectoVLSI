@@ -1,0 +1,14 @@
+# Archivos de la Librería de Celdas (Masters y Verilog generados)
+*.mr
+*.pvl
+*.syn
+
+
+# Archivos de Log y Salida
+*.log
+*.svf
+cksum_dir
+default.svf
+
+# Archivos de libreria
+*.alib

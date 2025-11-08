@@ -13,14 +13,14 @@ set gate_verilog "$env(HOME)/ie0411/proyecto/WORK/results/system.v" ; #ES NECESA
 ##########################################################################################
 # CONFIGURACIONES GENERALES
 ##########################################################################################
-set COMMON_SETUP_SCRIPT "$env(HOME)/ie0411/AMBER_ARM_2CORE/scripts/icc/common_setup.tcl"
+set COMMON_SETUP_SCRIPT "$env(HOME)/ie0411/scripts/icc/common_setup.tcl"
 source $COMMON_SETUP_SCRIPT
 
 ###################################################################################
 # INICIALIZACIÓN DE LA LIBRERÍA
 ###################################################################################
 
-set_host_options -max_cores 2
+set_host_options -max_cores 10
 
 set link_library   $LINK_LIBRARY_FILES
 set target_library $TARGET_LIBRARY_FILES
