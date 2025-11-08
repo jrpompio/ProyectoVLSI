@@ -11,7 +11,7 @@ set DCRM_FINAL_POWER_REPORT ${DESIGN_NAME}.power.rpt
 set DCRM_FINAL_QOR_REPORT ${DESIGN_NAME}.qor.rpt
 set DO_CLOCK_GATING false
 #exec rm -rf ${RESULTS_DIR} ${REPORTS_DIR}
-exec mkdir ${RESULTS_DIR} ${REPORTS_DIR}
+#exec mkdir ${RESULTS_DIR} ${REPORTS_DIR}
 ##########################################################################################
 #         POR HACER!!!! REVISE QUE ESTAS RUTAS COINCIDAN CON LAS QUE ESTÁ TRABAJANDO
 ##########################################################################################
@@ -42,6 +42,9 @@ set_app_var verilogout_show_unconnected_pins true
 set_app_var compile_seqmap_propagate_constants false 
 set_app_var sh_enable_page_mode false
 set_app_var report_default_significant_digits 4
+
+# cores
+set_host_options -max_cores 10
 
 
 #multi-voltage, multi-corner
@@ -236,7 +239,7 @@ foreach_in_coll cell $dont_touch_cells {
 }
 
 # CARGA DE CONSTRAINTS
-source -e -v "$env(HOME)/ie0411/projecto/scripts/dc/constraints.sdc"
+source -e -v "$env(HOME)/ie0411/proyecto/scripts/dc/constraints.sdc"
 
 
 compile_ultra -exact_map -no_autoungroup
