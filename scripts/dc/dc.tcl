@@ -17,8 +17,8 @@ exec mkdir ${RESULTS_DIR} ${REPORTS_DIR}
 ##########################################################################################
 set WDIR "$env(HOME)/ie0411/proyecto/WORK" ; #ES NECESARIO MODIFICAR AL HOME USUARIO CORRECTO
 set TOP ${WDIR}/..
-set verilog_path "$env(HOME)/ie0411/proyecto/AMBER_ARM_2CORE/verilog"
-set rtl_list_path "$env(HOME)/ie0411/proyecto/AMBER_ARM_2CORE/scripts/dc/rtl.list"
+set verilog_path "$env(HOME)/ie0411/proyecto/rtl"
+set rtl_list_path "$env(HOME)/ie0411/proyecto/scripts/dc/rtl.list"
 
 ##########################################################################################
 # VARIABLES DE CONFIGURACIÓN DE LIBRERIA NO MODIFICAR
@@ -236,7 +236,7 @@ foreach_in_coll cell $dont_touch_cells {
 }
 
 # CARGA DE CONSTRAINTS
-source -e -v "$env(HOME)/ie0411/projecto/AMBER_ARM_2CORE/scripts/dc/constraints.sdc"
+source -e -v "$env(HOME)/ie0411/projecto/scripts/dc/constraints.sdc"
 
 
 compile_ultra -exact_map -no_autoungroup
