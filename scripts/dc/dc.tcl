@@ -4,8 +4,8 @@
 
 set DESIGN_NAME "system"  
 set DESIGN $DESIGN_NAME
-set REPORTS_DIR ../reports
-set RESULTS_DIR ../results
+set REPORTS_DIR ../reports_dc
+set RESULTS_DIR ../results_dc
 set DCRM_FINAL_AREA_REPORT ${DESIGN_NAME}.area.rpt
 set DCRM_FINAL_POWER_REPORT ${DESIGN_NAME}.power.rpt
 set DCRM_FINAL_QOR_REPORT ${DESIGN_NAME}.qor.rpt
