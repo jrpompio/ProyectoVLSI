@@ -80,4 +80,5 @@ source ./scripts/icc/icc.tcl
 
 ## Créditos
 
-Proyecto académico del curso **IE0411 – Diseño VLSI**.
+Proyecto académico del curso **IE0411 – Diseño #VLSI**.
+#Ayuda
