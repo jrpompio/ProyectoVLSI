@@ -5,7 +5,7 @@ Warning: Design 'system' contains 1 high-fanout nets. A fanout number of 1000 wi
 Report : qor
 Design : system
 Version: X-2025.06-SP1
-Date   : Sat Nov  8 18:15:28 2025
+Date   : Sat Nov 22 11:19:06 2025
 ****************************************
 
 
@@ -91,12 +91,12 @@ Date   : Sat Nov  8 18:15:28 2025
 
   Compile CPU Statistics
   -----------------------------------------
-  Resource Sharing:                 12.5117
-  Logic Optimization:              130.1768
-  Mapping Optimization:            765.0215
+  Resource Sharing:                 12.1699
+  Logic Optimization:              126.5567
+  Mapping Optimization:            762.3545
   -----------------------------------------
-  Overall Compile Time:            1451.3007
-  Overall Compile Wall Clock Time: 357.4873
+  Overall Compile Time:            1426.0112
+  Overall Compile Wall Clock Time: 353.5285
 
   --------------------------------------------------------------------
 
