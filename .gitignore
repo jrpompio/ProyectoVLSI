@@ -10,5 +10,5 @@
 cksum_dir
 default.svf
 
-# Archivos de libreria
-*.alib
+# editores
+*.swp

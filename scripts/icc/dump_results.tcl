@@ -3,7 +3,7 @@
 #-------------------------------------------------------------------------------------------------------#
 
 # Write files
-set ICC_FILE_DUMPS ${WORK_DIR}/../results_icc
+set ICC_FILE_DUMPS ${WORK_DIR}/../resultsICC
 write_verilog $ICC_FILE_DUMPS/system.v
 write_sdf $ICC_FILE_DUMPS/system.sdf
 write_sdc -output $ICC_FILE_DUMPS/system.sdc
@@ -13,7 +13,7 @@ write_parasitics -format SPEF -output $ICC_FILE_DUMPS/system.spef
 
 # Reports
 
-set REPORTS_DIR_PLACE_OPT ${WORK_DIR}/../reports_icc
+set REPORTS_DIR_PLACE_OPT ${WORK_DIR}/../reportsICC
 set ICC_PLACE_OPT_CEL system
 redirect -file $REPORTS_DIR_PLACE_OPT/$ICC_PLACE_OPT_CEL.max.tim {report_timing -capacitance -transition_time -input_pins -nets -delay max -nosplit}
 redirect -file $REPORTS_DIR_PLACE_OPT/$ICC_PLACE_OPT_CEL.min.tim {report_timing -capacitance -transition_time -input_pins -nets -delay min -nosplit}

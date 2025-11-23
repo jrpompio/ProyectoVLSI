@@ -1,0 +1,37 @@
+ 
+****************************************
+Report : threshold voltage group
+        -analysis_effort low
+Design : system
+Version: X-2025.06-SP1
+Date   : Sat Nov 22 16:19:14 2025
+****************************************
+
+********************************************************************************
+                        Threshold Voltage Group Report                         
+********************************************************************************
+
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+
+Vth Group                All                Blackbox           Non-blackbox
+Name                    cells                cells                cells
+********************************************************************************
+undefined           54309 (100.00%)         25 (100.00%)      54284 (100.00%)   
+********************************************************************************
+
+Vth Group                All                Blackbox           Non-blackbox
+Name                  cell area            cell area            cell area
+********************************************************************************
+undefined        93071.17 (100.00%)   66715.88 (100.00%)   26355.29 (100.00%)   
+********************************************************************************
+
+Vth Group                All                Blackbox           Non-blackbox
+Name                 cell leakage        cell leakage          cell leakage
+********************************************************************************
+undefined       997.620uW (100.00%)    1.241uW (100.00%)  996.378uW (100.00%)   
+********************************************************************************
+
+1

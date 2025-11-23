@@ -2,13 +2,13 @@
 # VARIABLES GLOBALES REVISE QUE APUNTEN A LOS DIRECTORIOS ADECUADOS
 ##########################################################################################
 set DESIGN_NAME system
-set REPORTS_DIR reports_icc
-set RESULTS_DIR results_icc
+set REPORTS_DIR ../reportsICC
+set RESULTS_DIR ../resultsICC
 set SCRIPTS_DIR "$env(HOME)/ie0411/proyecto/scripts/" ; # DONDE SEA QUE COPIARON LOS SCRIPTS
-set SDC_FILE "$env(HOME)/ie0411/proyecto/results_dc/system.sdc" ; # ESTE ARCHIVO ES EL GENERADO POR SINTESIS, NO EL DADO POR EL PROFESOR PARA INICIAR SINTESIS
+set SDC_FILE "$env(HOME)/ie0411/proyecto/resultsDC/system.sdc" ; # ESTE ARCHIVO ES EL GENERADO POR SINTESIS, NO EL DADO POR EL PROFESOR PARA INICIAR SINTESIS
 set WDIR "$env(HOME)/ie0411/proyecto/WORK" ; #ES NECESARIO MODIFICAR AL HOME USUARIO CORRECTO
 set TOP ${WDIR}/..
-set gate_verilog "$env(HOME)/ie0411/proyecto/results_dc/system.v" ; #ES NECESARIO MODIFICAR AL PATH CORRECTO
+set gate_verilog "$env(HOME)/ie0411/proyecto/resultsDC/system.v" ; #ES NECESARIO MODIFICAR AL PATH CORRECTO
 
 ##########################################################################################
 # CONFIGURACIONES GENERALES

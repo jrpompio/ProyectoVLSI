@@ -4,14 +4,14 @@
 
 set DESIGN_NAME "system"  
 set DESIGN $DESIGN_NAME
-set REPORTS_DIR ../reports_dc
-set RESULTS_DIR ../results_dc
+set REPORTS_DIR ../reportsDC
+set RESULTS_DIR ../resultsDC
 set DCRM_FINAL_AREA_REPORT ${DESIGN_NAME}.area.rpt
 set DCRM_FINAL_POWER_REPORT ${DESIGN_NAME}.power.rpt
 set DCRM_FINAL_QOR_REPORT ${DESIGN_NAME}.qor.rpt
 set DO_CLOCK_GATING false
-#exec rm -rf ${RESULTS_DIR} ${REPORTS_DIR}
-#exec mkdir ${RESULTS_DIR} ${REPORTS_DIR}
+exec rm -rf ${RESULTS_DIR} ${REPORTS_DIR}
+exec mkdir ${RESULTS_DIR} ${REPORTS_DIR}
 ##########################################################################################
 #         POR HACER!!!! REVISE QUE ESTAS RUTAS COINCIDAN CON LAS QUE ESTÁ TRABAJANDO
 ##########################################################################################
@@ -241,6 +241,7 @@ foreach_in_coll cell $dont_touch_cells {
 # CARGA DE CONSTRAINTS
 source -e -v "$env(HOME)/ie0411/proyecto/scripts/dc/constraints.sdc"
 
+set_max_fanout 8 [current_design]
 
 compile_ultra -exact_map -no_autoungroup
 
