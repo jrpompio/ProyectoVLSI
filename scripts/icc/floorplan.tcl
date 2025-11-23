@@ -8,7 +8,7 @@
 # INICIALIZACIÓN DE LA FORMA
 initialize_floorplan \
   -flip_first_row true \
-  -boundary {{0 0} {950 950}} \
+  -boundary {{0 0} {210 210}} \
   -core_offset {15 15 15 15}
 
 
