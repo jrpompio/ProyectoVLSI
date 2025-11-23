@@ -8,7 +8,7 @@
 # INICIALIZACIÓN DE LA FORMA
 initialize_floorplan \
   -flip_first_row true \
-  -boundary {{0 0} {210 210}} \
+  -boundary {{0 0} {530 500}} \
   -core_offset {15 15 15 15}
 
 
@@ -23,6 +23,26 @@ initialize_floorplan \
 #set_attribute -quiet $obj is_fixed true
 #set_attribute -quiet $obj is_soft_fixed false
 #set_attribute -quiet $obj eco_status eco_reset
+
+set obj [get_cells -hierarchical *myram*]
+if {[sizeof_collection $obj] > 0} {
+    # Nota: Si tienes múltiples RAMs, deberías iterar con un 'foreach_in_collection'
+    # Asumimos aquí que 'obj' es una sola celda o que quieres moverlas todas al mismo punto (cuidado con esto).
+    
+    set_attribute -quiet $obj orientation R0
+    move_objects $obj -x 100 -y 200
+    set_attribute -quiet $obj is_placed true
+    set_attribute -quiet $obj is_fixed true
+    set_attribute -quiet $obj is_soft_fixed false
+    set_attribute -quiet $obj eco_status eco_reset
+
+    # Crear blockage alrededor de la macro
+    # Obtenemos el Bounding Box. El formato retornado es {{x1 y1} {x2 y2}}
+    set bbox [get_attribute $obj bbox]
+    
+    # Usamos el bbox directamente en -boundary, ya que el formato es compatible
+    create_placement_blockage -boundary $bbox -type hard
+}
 
 ##########################################################################################
 # BLOQUEOS DE PLACEMENT
