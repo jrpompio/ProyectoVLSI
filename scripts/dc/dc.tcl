@@ -241,9 +241,25 @@ foreach_in_coll cell $dont_touch_cells {
 # CARGA DE CONSTRAINTS
 source -e -v "$env(HOME)/ie0411/proyecto/scripts/dc/constraints.sdc"
 
-set_max_fanout 8 [current_design]
+set_max_fanout 16 [current_design]
+##########################################################################################
+##########################################################################################
+##########################################################################################
+set alu_adder [get_cells -hierarchical -quiet "*u_alu*add_x_8*"]
+if {[sizeof_collection $alu_adder] > 0} {
+    puts "--> APLICANDO OPTIMIZACIÓN EN: [get_object_name $alu_adder]"
 
-compile_ultra -exact_map -no_autoungroup
+    # Forzamos arquitectura Parallel Prefix (la más rápida) solo en esta celda
+    # Esto usa el comando 'set_implementation' que revisamos en el manual
+    set_implementation pparch $alu_adder
+} else {
+    puts "--> ADVERTENCIA: No se encontró el sumador add_x_8 para optimizar."
+}
+##########################################################################################
+##########################################################################################
+
+compile_ultra -retime -no_autoungroup
+#compile_ultra -exact_map -no_autoungroup
 
 ##########################################################################################
 # RESULTADOS DE SINTESIS

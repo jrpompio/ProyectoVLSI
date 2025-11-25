@@ -1,3 +1,4 @@
+Warning: Design 'system' has '5' unresolved references. For more detailed information, use the "link" command. (UID-341)
  
 ****************************************
 Report : timing
@@ -9,7 +10,7 @@ Report : timing
         -capacitance
 Design : system
 Version: X-2025.06-SP1
-Date   : Sat Nov 22 16:19:20 2025
+Date   : Mon Nov 24 14:09:46 2025
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -17,360 +18,353 @@ Date   : Sat Nov 22 16:19:20 2025
 Operating Conditions: tt0p8v25c_i0p8v   Library: saed14lvt_dlvl_tt0p8v25c_i0p8v
 Wire Load Model Mode: top
 
-  Startpoint: u_amber0/u_decode/o_rs_sel_reg_0_
-              (rising edge-triggered flip-flop clocked by BRD_CLK_P)
-  Endpoint: u_amber0/u_execute/status_bits_flags_reg_3_
+  Startpoint: u_amber1/u_execute/status_bits_mode_rds_oh_reg\[2\]/CK
+              (internal path startpoint clocked by BRD_CLK_P)
+  Endpoint: u_amber1/u_execute/o_daddress_reg\[31\]
             (rising edge-triggered flip-flop clocked by BRD_CLK_P)
   Path Group: BRD_CLK_P
   Path Type: max
 
   Des/Clust/Port     Wire Load Model       Library
   ------------------------------------------------
-  system             140000                saed14lvt_dlvl_tt0p8v25c_i0p8v
+  system             70000                 saed14lvt_dlvl_tt0p8v25c_i0p8v
 
-  Point                                                                Cap     Trans      Incr       Path
-  ----------------------------------------------------------------------------------------------------------
-  clock BRD_CLK_P (rise edge)                                                           0.0000     0.0000
-  clock network delay (ideal)                                                           0.0000     0.0000
-  u_amber0/u_decode/o_rs_sel_reg_0_/CK (SAEDLVT14_FDPQB_V3_1)                 0.0000    0.0000 #   0.0000 r
-  u_amber0/u_decode/o_rs_sel_reg_0_/QN (SAEDLVT14_FDPQB_V3_1)       0.4303    0.0028    0.0101     0.0101 r
-  u_amber0/u_decode/U247/A (SAEDRVT14_INV_0P5)                                0.0028    0.0507     0.0609 r
-  u_amber0/u_decode/U247/X (SAEDRVT14_INV_0P5)                      1.7301    0.0098    0.0088     0.0697 f
-  u_amber0/u_decode/o_rs_sel[0] (a25_decode_1)                                          0.0000     0.0697 f
-  u_amber0/u_execute/i_rs_sel[0] (a25_execute_1)                                        0.0000     0.0697 f
-  u_amber0/u_execute/u_register_bank/i_rs_sel[0] (a25_register_bank_1)                  0.0000     0.0697 f
-  u_amber0/u_execute/u_register_bank/U1034/B (SAEDHVT14_AN2B_PMM_2)           0.0098    0.1080     0.1777 f
-  u_amber0/u_execute/u_register_bank/U1034/X (SAEDHVT14_AN2B_PMM_2)   0.9064   0.0035   0.0124     0.1901 f
-  u_amber0/u_execute/u_register_bank/U1029/A1 (SAEDHVT14_ND2_ECO_1)           0.0035    0.0848     0.2749 f
-  u_amber0/u_execute/u_register_bank/U1029/X (SAEDHVT14_ND2_ECO_1)   0.4700   0.0056    0.0066     0.2816 r
-  u_amber0/u_execute/u_register_bank/U631/A (SAEDRVT14_INV_0P5)               0.0056    0.0507     0.3323 r
-  u_amber0/u_execute/u_register_bank/U631/X (SAEDRVT14_INV_0P5)     0.5531    0.0041    0.0058     0.3381 f
-  u_amber0/u_execute/u_register_bank/U799/A2 (SAEDHVT14_ND2_MM_0P5)           0.0041    0.0537     0.3918 f
-  u_amber0/u_execute/u_register_bank/U799/X (SAEDHVT14_ND2_MM_0P5)   1.8265   0.0156    0.0143     0.4062 r
-  u_amber0/u_execute/u_register_bank/U939/B1 (SAEDHVT14_OAI22_0P75)           0.0156    0.0697     0.4759 r
-  u_amber0/u_execute/u_register_bank/U939/X (SAEDHVT14_OAI22_0P75)   0.3882   0.0089    0.0156     0.4914 f
-  u_amber0/u_execute/u_register_bank/U965/A2 (SAEDHVT14_OR4_1)                0.0089    0.0784     0.5699 f
-  u_amber0/u_execute/u_register_bank/U965/X (SAEDHVT14_OR4_1)       0.3882    0.0043    0.0193     0.5891 f
-  u_amber0/u_execute/u_register_bank/U1091/A2 (SAEDHVT14_OR4_1)               0.0043    0.0784     0.6675 f
-  u_amber0/u_execute/u_register_bank/U1091/X (SAEDHVT14_OR4_1)      0.3996    0.0043    0.0178     0.6853 f
-  u_amber0/u_execute/u_register_bank/U1027/A3 (SAEDLVT14_OR4_1)               0.0043    0.0807     0.7660 f
-  u_amber0/u_execute/u_register_bank/U1027/X (SAEDLVT14_OR4_1)      0.4435    0.0029    0.0121     0.7781 f
-  u_amber0/u_execute/u_register_bank/U995/B (SAEDRVT14_AO21_U_0P5)            0.0029    0.0498     0.8280 f
-  u_amber0/u_execute/u_register_bank/U995/X (SAEDRVT14_AO21_U_0P5)   0.2070   0.0029    0.0098     0.8378 f
-  u_amber0/u_execute/u_register_bank/o_rs[4] (a25_register_bank_1)                      0.0000     0.8378 f
-  u_amber0/u_execute/U176/D1 (SAEDRVT14_MUX2_1)                               0.0029    0.0418     0.8796 f
-  u_amber0/u_execute/U176/X (SAEDRVT14_MUX2_1)                      0.5750    0.0034    0.0126     0.8922 f
-  u_amber0/u_execute/U409/A3 (SAEDLVT14_AO32_U_0P5)                           0.0034    0.0687     0.9609 f
-  u_amber0/u_execute/U409/X (SAEDLVT14_AO32_U_0P5)                  1.1706    0.0065    0.0162     0.9771 f
-  u_amber0/u_execute/u_barrel_shift/i_shift_amount[4] (a25_barrel_shift_1)              0.0000     0.9771 f
-  u_amber0/u_execute/u_barrel_shift/U67/A (SAEDHVT14_AN2B_PMM_2)              0.0065    0.0915     1.0686 f
-  u_amber0/u_execute/u_barrel_shift/U67/X (SAEDHVT14_AN2B_PMM_2)    3.1210    0.0080    0.0187     1.0873 r
-  u_amber0/u_execute/u_barrel_shift/U591/CK (SAEDHVT14_CLKSPLT_1)             0.0080    0.3796     1.4669 r
-  u_amber0/u_execute/u_barrel_shift/U591/CKOUT (SAEDHVT14_CLKSPLT_1)   1.6697   0.0041   0.0091    1.4760 r
-  u_amber0/u_execute/u_barrel_shift/U574/B1 (SAEDLVT14_AO2BB2_1)              0.0041    0.0850     1.5610 r
-  u_amber0/u_execute/u_barrel_shift/U574/X (SAEDLVT14_AO2BB2_1)     0.6158    0.0027    0.0135     1.5745 r
-  u_amber0/u_execute/u_barrel_shift/U383/A2 (SAEDLVT14_NR2_1)                 0.0027    0.0823     1.6568 r
-  u_amber0/u_execute/u_barrel_shift/U383/X (SAEDLVT14_NR2_1)        0.8839    0.0074    0.0056     1.6624 f
-  u_amber0/u_execute/u_barrel_shift/U420/A (SAEDLVT14_ND2B_U_0P5)             0.0074    0.0823     1.7447 f
-  u_amber0/u_execute/u_barrel_shift/U420/X (SAEDLVT14_ND2B_U_0P5)   0.8182    0.0092    0.0102     1.7549 f
-  u_amber0/u_execute/u_barrel_shift/U306/A1 (SAEDRVT14_OAI21_0P5)             0.0092    0.0862     1.8411 f
-  u_amber0/u_execute/u_barrel_shift/U306/X (SAEDRVT14_OAI21_0P5)    0.2927    0.0056    0.0073     1.8484 r
-  u_amber0/u_execute/u_barrel_shift/U575/B (SAEDRVT14_OA21B_1)                0.0056    0.0591     1.9075 r
-  u_amber0/u_execute/u_barrel_shift/U575/X (SAEDRVT14_OA21B_1)      0.5335    0.0054    0.0062     1.9137 f
-  u_amber0/u_execute/u_barrel_shift/U305/B1 (SAEDRVT14_OAI22_0P5)             0.0054    0.0522     1.9659 f
-  u_amber0/u_execute/u_barrel_shift/U305/X (SAEDRVT14_OAI22_0P5)    0.2438    0.0088    0.0087     1.9746 r
-  u_amber0/u_execute/u_barrel_shift/U781/A1 (SAEDRVT14_NR4_0P75)              0.0088    0.0492     2.0238 r
-  u_amber0/u_execute/u_barrel_shift/U781/X (SAEDRVT14_NR4_0P75)     0.2375    0.0020    0.0144     2.0382 f
-  u_amber0/u_execute/u_barrel_shift/U663/B (SAEDHVT14_OAI21_0P5)              0.0020    0.0480     2.0862 f
-  u_amber0/u_execute/u_barrel_shift/U663/X (SAEDHVT14_OAI21_0P5)    0.4272    0.0073    0.0054     2.0916 r
-  u_amber0/u_execute/u_barrel_shift/o_out[1] (a25_barrel_shift_1)                       0.0000     2.0916 r
-  u_amber0/u_execute/u_alu/i_b_in[1] (a25_alu_1)                                        0.0000     2.0916 r
-  u_amber0/u_execute/u_alu/U86/A2 (SAEDHVT14_AO2BB2_1)                        0.0073    0.0505     2.1421 r
-  u_amber0/u_execute/u_alu/U86/X (SAEDHVT14_AO2BB2_1)               0.8427    0.0040    0.0170     2.1590 f
-  u_amber0/u_execute/u_alu/U40/S (SAEDHVT14_MUXI2_U_0P5)                      0.0040    0.1027     2.2618 f
-  u_amber0/u_execute/u_alu/U40/X (SAEDHVT14_MUXI2_U_0P5)            0.6596    0.0100    0.0129     2.2747 f
-  u_amber0/u_execute/u_alu/add_x_8/A[1] (a25_alu_0_DW01_add_J18_0_1)                    0.0000     2.2747 f
-  u_amber0/u_execute/u_alu/add_x_8/U170/B (SAEDRVT14_ADDF_V2_0P5)             0.0100    0.1332     2.4079 f
-  u_amber0/u_execute/u_alu/add_x_8/U170/CO (SAEDRVT14_ADDF_V2_0P5)   0.3803   0.0045    0.0258     2.4337 f
-  u_amber0/u_execute/u_alu/add_x_8/U196/A (SAEDLVT14_ADDF_V2_0P5)             0.0045    0.0768     2.5105 f
-  u_amber0/u_execute/u_alu/add_x_8/U196/CO (SAEDLVT14_ADDF_V2_0P5)   0.3803   0.0041    0.0202     2.5307 f
-  u_amber0/u_execute/u_alu/add_x_8/U153/A (SAEDLVT14_ADDF_V2_0P5)             0.0041    0.0768     2.6075 f
-  u_amber0/u_execute/u_alu/add_x_8/U153/CO (SAEDLVT14_ADDF_V2_0P5)   0.3803   0.0039    0.0200     2.6275 f
-  u_amber0/u_execute/u_alu/add_x_8/U197/A (SAEDLVT14_ADDF_V2_0P5)             0.0039    0.0768     2.7043 f
-  u_amber0/u_execute/u_alu/add_x_8/U197/CO (SAEDLVT14_ADDF_V2_0P5)   0.6897   0.0048    0.0211     2.7255 f
-  u_amber0/u_execute/u_alu/add_x_8/U129/A (SAEDRVT14_ADDF_V2_0P5)             0.0048    0.0813     2.8068 f
-  u_amber0/u_execute/u_alu/add_x_8/U129/CO (SAEDRVT14_ADDF_V2_0P5)   0.6115   0.0055    0.0287     2.8355 f
-  u_amber0/u_execute/u_alu/add_x_8/U191/A1 (SAEDHVT14_ND2_ECO_1)              0.0055    0.0764     2.9119 f
-  u_amber0/u_execute/u_alu/add_x_8/U191/X (SAEDHVT14_ND2_ECO_1)     0.2786    0.0045    0.0066     2.9185 r
-  u_amber0/u_execute/u_alu/add_x_8/U168/A3 (SAEDRVT14_AN3_0P5)                0.0045    0.0563     2.9747 r
-  u_amber0/u_execute/u_alu/add_x_8/U168/X (SAEDRVT14_AN3_0P5)       0.4197    0.0039    0.0136     2.9884 r
-  u_amber0/u_execute/u_alu/add_x_8/U175/B1 (SAEDHVT14_OA2BB2_V1_0P5)          0.0039    0.0465     3.0349 r
-  u_amber0/u_execute/u_alu/add_x_8/U175/X (SAEDHVT14_OA2BB2_V1_0P5)   0.2161   0.0060   0.0103     3.0451 r
-  u_amber0/u_execute/u_alu/add_x_8/U180/A1 (SAEDHVT14_AN2_0P5)                0.0060    0.0436     3.0888 r
-  u_amber0/u_execute/u_alu/add_x_8/U180/X (SAEDHVT14_AN2_0P5)       0.2022    0.0023    0.0105     3.0992 r
-  u_amber0/u_execute/u_alu/add_x_8/U189/B1 (SAEDHVT14_OAI22_0P75)             0.0023    0.0408     3.1401 r
-  u_amber0/u_execute/u_alu/add_x_8/U189/X (SAEDHVT14_OAI22_0P75)    0.7399    0.0111    0.0118     3.1518 f
-  u_amber0/u_execute/u_alu/add_x_8/U200/A (SAEDRVT14_INV_0P5)                 0.0111    0.0563     3.2081 f
-  u_amber0/u_execute/u_alu/add_x_8/U200/X (SAEDRVT14_INV_0P5)       0.2525    0.0045    0.0062     3.2144 r
-  u_amber0/u_execute/u_alu/add_x_8/U211/B2 (SAEDRVT14_OA22_U_0P5)             0.0045    0.0510     3.2654 r
-  u_amber0/u_execute/u_alu/add_x_8/U211/X (SAEDRVT14_OA22_U_0P5)    0.4523    0.0046    0.0151     3.2805 r
-  u_amber0/u_execute/u_alu/add_x_8/U225/B1 (SAEDHVT14_OAI22_0P75)             0.0046    0.0478     3.3283 r
-  u_amber0/u_execute/u_alu/add_x_8/U225/X (SAEDHVT14_OAI22_0P75)    0.5580    0.0094    0.0118     3.3400 f
-  u_amber0/u_execute/u_alu/add_x_8/U99/A3 (SAEDHVT14_AN3_0P5)                 0.0094    0.0647     3.4048 f
-  u_amber0/u_execute/u_alu/add_x_8/U99/X (SAEDHVT14_AN3_0P5)        0.3946    0.0037    0.0145     3.4193 f
-  u_amber0/u_execute/u_alu/add_x_8/U101/A (SAEDLVT14_ND3B_0P75)               0.0037    0.0797     3.4990 f
-  u_amber0/u_execute/u_alu/add_x_8/U101/X (SAEDLVT14_ND3B_0P75)     0.4799    0.0020    0.0131     3.5122 f
-  u_amber0/u_execute/u_alu/add_x_8/U169/B2 (SAEDRVT14_ND3B_0P75)              0.0020    0.0463     3.5585 f
-  u_amber0/u_execute/u_alu/add_x_8/U169/X (SAEDRVT14_ND3B_0P75)     0.3236    0.0025    0.0137     3.5722 r
-  u_amber0/u_execute/u_alu/add_x_8/U183/A1 (SAEDHVT14_ND2_ECO_1)              0.0025    0.0654     3.6376 r
-  u_amber0/u_execute/u_alu/add_x_8/U183/X (SAEDHVT14_ND2_ECO_1)     0.3803    0.0045    0.0047     3.6423 f
-  u_amber0/u_execute/u_alu/add_x_8/U209/A (SAEDLVT14_ADDF_V2_0P5)             0.0045    0.0768     3.7191 f
-  u_amber0/u_execute/u_alu/add_x_8/U209/CO (SAEDLVT14_ADDF_V2_0P5)   0.6075   0.0046    0.0211     3.7402 f
-  u_amber0/u_execute/u_alu/add_x_8/U173/A1 (SAEDHVT14_ND2_ECO_1)              0.0046    0.0764     3.8166 f
-  u_amber0/u_execute/u_alu/add_x_8/U173/X (SAEDHVT14_ND2_ECO_1)     0.3236    0.0047    0.0064     3.8230 r
-  u_amber0/u_execute/u_alu/add_x_8/U167/A1 (SAEDHVT14_ND2_ECO_1)              0.0047    0.0654     3.8884 r
-  u_amber0/u_execute/u_alu/add_x_8/U167/X (SAEDHVT14_ND2_ECO_1)     0.3803    0.0047    0.0058     3.8942 f
-  u_amber0/u_execute/u_alu/add_x_8/U232/A (SAEDLVT14_ADDF_V2_0P5)             0.0047    0.0768     3.9710 f
-  u_amber0/u_execute/u_alu/add_x_8/U232/CO (SAEDLVT14_ADDF_V2_0P5)   0.6075   0.0046    0.0212     3.9922 f
-  u_amber0/u_execute/u_alu/add_x_8/U181/A1 (SAEDHVT14_ND2_ECO_1)              0.0046    0.0764     4.0686 f
-  u_amber0/u_execute/u_alu/add_x_8/U181/X (SAEDHVT14_ND2_ECO_1)     0.3236    0.0047    0.0064     4.0750 r
-  u_amber0/u_execute/u_alu/add_x_8/U174/A1 (SAEDHVT14_ND2_ECO_1)              0.0047    0.0654     4.1404 r
-  u_amber0/u_execute/u_alu/add_x_8/U174/X (SAEDHVT14_ND2_ECO_1)     0.3803    0.0047    0.0058     4.1462 f
-  u_amber0/u_execute/u_alu/add_x_8/U201/A (SAEDLVT14_ADDF_V2_0P5)             0.0047    0.0768     4.2230 f
-  u_amber0/u_execute/u_alu/add_x_8/U201/CO (SAEDLVT14_ADDF_V2_0P5)   0.6075   0.0046    0.0212     4.2442 f
-  u_amber0/u_execute/u_alu/add_x_8/U213/A1 (SAEDHVT14_ND2_ECO_1)              0.0046    0.0764     4.3205 f
-  u_amber0/u_execute/u_alu/add_x_8/U213/X (SAEDHVT14_ND2_ECO_1)     0.3236    0.0047    0.0064     4.3270 r
-  u_amber0/u_execute/u_alu/add_x_8/U199/A1 (SAEDHVT14_ND2_ECO_1)              0.0047    0.0654     4.3923 r
-  u_amber0/u_execute/u_alu/add_x_8/U199/X (SAEDHVT14_ND2_ECO_1)     0.3803    0.0047    0.0058     4.3981 f
-  u_amber0/u_execute/u_alu/add_x_8/U190/A (SAEDLVT14_ADDF_V2_0P5)             0.0047    0.0768     4.4750 f
-  u_amber0/u_execute/u_alu/add_x_8/U190/CO (SAEDLVT14_ADDF_V2_0P5)   0.6075   0.0046    0.0212     4.4961 f
-  u_amber0/u_execute/u_alu/add_x_8/U212/A1 (SAEDHVT14_ND2_ECO_1)              0.0046    0.0764     4.5725 f
-  u_amber0/u_execute/u_alu/add_x_8/U212/X (SAEDHVT14_ND2_ECO_1)     0.3236    0.0047    0.0064     4.5790 r
-  u_amber0/u_execute/u_alu/add_x_8/U198/A1 (SAEDHVT14_ND2_ECO_1)              0.0047    0.0654     4.6443 r
-  u_amber0/u_execute/u_alu/add_x_8/U198/X (SAEDHVT14_ND2_ECO_1)     0.3803    0.0047    0.0058     4.6501 f
-  u_amber0/u_execute/u_alu/add_x_8/U210/A (SAEDLVT14_ADDF_V2_0P5)             0.0047    0.0768     4.7269 f
-  u_amber0/u_execute/u_alu/add_x_8/U210/CO (SAEDLVT14_ADDF_V2_0P5)   1.5508   0.0082    0.0242     4.7512 f
-  u_amber0/u_execute/u_alu/add_x_8/U226/A1 (SAEDHVT14_ND2_ECO_1)              0.0082    0.1018     4.8530 f
-  u_amber0/u_execute/u_alu/add_x_8/U226/X (SAEDHVT14_ND2_ECO_1)     0.2783    0.0052    0.0077     4.8607 r
-  u_amber0/u_execute/u_alu/add_x_8/U135/A (SAEDHVT14_NR3B_U_0P5)              0.0052    0.0562     4.9169 r
-  u_amber0/u_execute/u_alu/add_x_8/U135/X (SAEDHVT14_NR3B_U_0P5)    0.2207    0.0028    0.0178     4.9348 r
-  u_amber0/u_execute/u_alu/add_x_8/U218/A1 (SAEDRVT14_OAI22_0P5)              0.0028    0.0446     4.9793 r
-  u_amber0/u_execute/u_alu/add_x_8/U218/X (SAEDRVT14_OAI22_0P5)     1.2778    0.0176    0.0139     4.9932 f
-  u_amber0/u_execute/u_alu/add_x_8/U130/A1 (SAEDHVT14_ND2_ECO_1)              0.0176    0.0931     5.0863 f
-  u_amber0/u_execute/u_alu/add_x_8/U130/X (SAEDHVT14_ND2_ECO_1)     0.6481    0.0095    0.0137     5.1000 r
-  u_amber0/u_execute/u_alu/add_x_8/U182/A1 (SAEDHVT14_ND2_ECO_1)              0.0095    0.0764     5.1764 r
-  u_amber0/u_execute/u_alu/add_x_8/U182/X (SAEDHVT14_ND2_ECO_1)     0.3236    0.0055    0.0074     5.1837 f
-  u_amber0/u_execute/u_alu/add_x_8/U126/A1 (SAEDHVT14_ND2_ECO_1)              0.0055    0.0654     5.2491 f
-  u_amber0/u_execute/u_alu/add_x_8/U126/X (SAEDHVT14_ND2_ECO_1)     0.4773    0.0058    0.0077     5.2568 r
-  u_amber0/u_execute/u_alu/add_x_8/U127/A1 (SAEDRVT14_AOI31_0P75)             0.0058    0.0569     5.3136 r
-  u_amber0/u_execute/u_alu/add_x_8/U127/X (SAEDRVT14_AOI31_0P75)    0.2190    0.0020    0.0162     5.3298 f
-  u_amber0/u_execute/u_alu/add_x_8/U144/B2 (SAEDLVT14_NR3B_U_0P5)             0.0020    0.0442     5.3740 f
-  u_amber0/u_execute/u_alu/add_x_8/U144/X (SAEDLVT14_NR3B_U_0P5)    0.2136    0.0018    0.0108     5.3849 r
-  u_amber0/u_execute/u_alu/add_x_8/U131/A2 (SAEDRVT14_AO2BB2_0P5)             0.0018    0.0431     5.4280 r
-  u_amber0/u_execute/u_alu/add_x_8/U131/X (SAEDRVT14_AO2BB2_0P5)    0.3444    0.0027    0.0123     5.4403 f
-  u_amber0/u_execute/u_alu/add_x_8/U132/A (SAEDRVT14_ADDF_V2_0P5)             0.0027    0.0696     5.5099 f
-  u_amber0/u_execute/u_alu/add_x_8/U132/CO (SAEDRVT14_ADDF_V2_0P5)   0.3803   0.0045    0.0265     5.5364 f
-  u_amber0/u_execute/u_alu/add_x_8/U171/A (SAEDLVT14_ADDF_V2_0P5)             0.0045    0.0768     5.6132 f
-  u_amber0/u_execute/u_alu/add_x_8/U171/S (SAEDLVT14_ADDF_V2_0P5)   1.0031    0.0055    0.0239     5.6371 f
-  u_amber0/u_execute/u_alu/add_x_8/SUM[31] (a25_alu_0_DW01_add_J18_0_1)                 0.0000     5.6371 f
-  u_amber0/u_execute/u_alu/U161/A1 (SAEDRVT14_AO21B_0P5)                      0.0055    0.0673     5.7045 f
-  u_amber0/u_execute/u_alu/U161/X (SAEDRVT14_AO21B_0P5)             1.0783    0.0081    0.0132     5.7176 f
-  u_amber0/u_execute/u_alu/U35/A (SAEDLVT14_BUF_ECO_1)                        0.0081    0.1098     5.8275 f
-  u_amber0/u_execute/u_alu/U35/X (SAEDLVT14_BUF_ECO_1)              0.5934    0.0021    0.0060     5.8334 f
-  u_amber0/u_execute/u_alu/o_out[31] (a25_alu_1)                                        0.0000     5.8334 f
-  u_amber0/u_execute/U169/A (SAEDHVT14_BUF_U_0P5)                             0.0021    0.0668     5.9002 f
-  u_amber0/u_execute/U169/X (SAEDHVT14_BUF_U_0P5)                   0.6940    0.0047    0.0086     5.9088 f
-  u_amber0/u_execute/U1816/A1 (SAEDLVT14_AO32_1)                              0.0047    0.0687     5.9775 f
-  u_amber0/u_execute/U1816/X (SAEDLVT14_AO32_1)                     0.2745    0.0027    0.0106     5.9881 f
-  u_amber0/u_execute/U1817/B (SAEDLVT14_AOI21_0P75)                           0.0027    0.0554     6.0435 f
-  u_amber0/u_execute/U1817/X (SAEDLVT14_AOI21_0P75)                 0.2691    0.0050    0.0043     6.0479 r
-  u_amber0/u_execute/U1818/B (SAEDLVT14_AO21B_0P5)                            0.0050    0.0544     6.1022 r
-  u_amber0/u_execute/U1818/X (SAEDLVT14_AO21B_0P5)                  0.3546    0.0032    0.0039     6.1061 f
-  u_amber0/u_execute/U1819/A3 (SAEDLVT14_AO32_1)                              0.0032    0.0716     6.1778 f
-  u_amber0/u_execute/U1819/X (SAEDLVT14_AO32_1)                     0.3133    0.0027    0.0129     6.1907 f
-  u_amber0/u_execute/status_bits_flags_reg_3_/D (SAEDLVT14_FDPQB_V2LP_1)      0.0027    0.0633     6.2540 f
-  data arrival time                                                                                6.2540
+  Point                                                                     Cap     Trans      Incr       Path
+  ---------------------------------------------------------------------------------------------------------------
+  clock BRD_CLK_P (rise edge)                                                                0.0000     0.0000
+  clock network delay (ideal)                                                                0.0000     0.0000
+  input external delay                                                                       0.0000     0.0000 r
+  u_amber1/u_execute/status_bits_mode_rds_oh_reg\[2\]/CK (SAEDLVT14_LSRDPQ_2)      0.0000    0.0000 #   0.0000 r
+  u_amber1/u_execute/status_bits_mode_rds_oh_reg\[2\]/Q (SAEDLVT14_LSRDPQ_2)   1.3374   0.0063   0.0124   0.0124 r
+  u_amber1/u_execute/u_register_bank/i_mode_rds_exec\[2\] (a25_register_bank_0)              0.0000     0.0124 r
+  u_amber1/u_execute/u_register_bank/U108/A1 (SAEDHVT14_NR2_1)                     0.0063    0.0670     0.0794 r
+  u_amber1/u_execute/u_register_bank/U108/X (SAEDHVT14_NR2_1)            1.2637    0.0088    0.0095     0.0890 f
+  u_amber1/u_execute/u_register_bank/U511/A2 (SAEDHVT14_ND2_MM_0P5)                0.0088    0.0690     0.1580 f
+  u_amber1/u_execute/u_register_bank/U511/X (SAEDHVT14_ND2_MM_0P5)       1.7516    0.0153    0.0164     0.1744 r
+  u_amber1/u_execute/u_register_bank/U479/A1 (SAEDRVT14_AO2BB2_4)                  0.0153    0.0867     0.2610 r
+  u_amber1/u_execute/u_register_bank/U479/X (SAEDRVT14_AO2BB2_4)         0.4479    0.0019    0.0183     0.2793 f
+  u_amber1/u_execute/u_register_bank/U100/A2 (SAEDRVT14_OR4_2)                     0.0019    0.0826     0.3619 f
+  u_amber1/u_execute/u_register_bank/U100/X (SAEDRVT14_OR4_2)            0.3815    0.0030    0.0145     0.3765 f
+  u_amber1/u_execute/u_register_bank/U1524/A4 (SAEDLVT14_OR4_1)                    0.0030    0.0704     0.4468 f
+  u_amber1/u_execute/u_register_bank/U1524/X (SAEDLVT14_OR4_1)           0.2945    0.0026    0.0119     0.4587 f
+  u_amber1/u_execute/u_register_bank/U936/A1 (SAEDHVT14_OR4_1)                     0.0026    0.0543     0.5130 f
+  u_amber1/u_execute/u_register_bank/U936/X (SAEDHVT14_OR4_1)            0.2992    0.0040    0.0124     0.5254 f
+  u_amber1/u_execute/u_register_bank/U534/A1 (SAEDHVT14_OR4_2)                     0.0040    0.0552     0.5806 f
+  u_amber1/u_execute/u_register_bank/U534/X (SAEDHVT14_OR4_2)            0.4429    0.0034    0.0129     0.5935 f
+  u_amber1/u_execute/u_register_bank/U562/B (SAEDRVT14_AO21_U_0P5)                 0.0034    0.0452     0.6387 f
+  u_amber1/u_execute/u_register_bank/U562/X (SAEDRVT14_AO21_U_0P5)       0.4143    0.0041    0.0111     0.6497 f
+  u_amber1/u_execute/u_register_bank/o_rs\[4\] (a25_register_bank_0)                         0.0000     0.6497 f
+  u_amber1/u_execute/U270/D1 (SAEDRVT14_MUX2_1)                                    0.0041    0.0443     0.6940 f
+  u_amber1/u_execute/U270/X (SAEDRVT14_MUX2_1)                           0.2618    0.0027    0.0121     0.7062 f
+  u_amber1/u_execute/U138/A1 (SAEDLVT14_AO32_1)                                    0.0027    0.0483     0.7545 f
+  u_amber1/u_execute/U138/X (SAEDLVT14_AO32_1)                           1.4409    0.0052    0.0125     0.7670 f
+  u_amber1/u_execute/u_barrel_shift/i_shift_amount\[4\] (a25_barrel_shift_0)                 0.0000     0.7670 f
+  u_amber1/u_execute/u_barrel_shift/U252/A1 (SAEDHVT14_ND2_MM_0P5)                 0.0052    0.1036     0.8706 f
+  u_amber1/u_execute/u_barrel_shift/U252/X (SAEDHVT14_ND2_MM_0P5)        1.5058    0.0134    0.0125     0.8832 r
+  u_amber1/u_execute/u_barrel_shift/U76/A1 (SAEDRVT14_AO2BB2_V1_2)                 0.0134    0.1008     0.9840 r
+  u_amber1/u_execute/u_barrel_shift/U76/X (SAEDRVT14_AO2BB2_V1_2)        0.2470    0.0018    0.0202     1.0042 f
+  u_amber1/u_execute/u_barrel_shift/U345/B (SAEDRVT14_AOI21_0P75)                  0.0018    0.0456     1.0498 f
+  u_amber1/u_execute/u_barrel_shift/U345/X (SAEDRVT14_AOI21_0P75)        0.4771    0.0080    0.0064     1.0562 r
+  u_amber1/u_execute/u_barrel_shift/U323/B (SAEDHVT14_AO21B_0P5)                   0.0080    0.0510     1.1072 r
+  u_amber1/u_execute/u_barrel_shift/U323/X (SAEDHVT14_AO21B_0P5)         0.3233    0.0045    0.0061     1.1134 f
+  u_amber1/u_execute/u_barrel_shift/U358/A1 (SAEDHVT14_ND2_ECO_1)                  0.0045    0.0596     1.1730 f
+  u_amber1/u_execute/u_barrel_shift/U358/X (SAEDHVT14_ND2_ECO_1)         0.3462    0.0089    0.0065     1.1795 r
+  u_amber1/u_execute/u_barrel_shift/U547/B (SAEDRVT14_OA21_MM_1)                   0.0089    0.0639     1.2433 r
+  u_amber1/u_execute/u_barrel_shift/U547/X (SAEDRVT14_OA21_MM_1)         0.2372    0.0032    0.0135     1.2569 r
+  u_amber1/u_execute/u_barrel_shift/U80/B (SAEDHVT14_OAI21_0P5)                    0.0032    0.0438     1.3006 r
+  u_amber1/u_execute/u_barrel_shift/U80/X (SAEDHVT14_OAI21_0P5)          0.2846    0.0056    0.0063     1.3069 f
+  u_amber1/u_execute/u_barrel_shift/U537/B (SAEDHVT14_OA21B_1)                     0.0056    0.0525     1.3594 f
+  u_amber1/u_execute/u_barrel_shift/U537/X (SAEDHVT14_OA21B_1)           0.5040    0.0050    0.0062     1.3657 r
+  u_amber1/u_execute/u_barrel_shift/U542/A1 (SAEDRVT14_OAI22_0P5)                  0.0050    0.0472     1.4129 r
+  u_amber1/u_execute/u_barrel_shift/U542/X (SAEDRVT14_OAI22_0P5)         0.3695    0.0092    0.0082     1.4210 f
+  u_amber1/u_execute/u_barrel_shift/U153/A2 (SAEDLVT14_OR3_1)                      0.0092    0.0682     1.4892 f
+  u_amber1/u_execute/u_barrel_shift/U153/X (SAEDLVT14_OR3_1)             0.2470    0.0022    0.0106     1.4998 f
+  u_amber1/u_execute/u_barrel_shift/U580/B (SAEDRVT14_AOI21_0P75)                  0.0022    0.0456     1.5454 f
+  u_amber1/u_execute/u_barrel_shift/U580/X (SAEDRVT14_AOI21_0P75)        0.2372    0.0052    0.0053     1.5507 r
+  u_amber1/u_execute/u_barrel_shift/U300/B (SAEDHVT14_OAI21_0P5)                   0.0052    0.0438     1.5944 r
+  u_amber1/u_execute/u_barrel_shift/U300/X (SAEDHVT14_OAI21_0P5)         0.6463    0.0083    0.0091     1.6035 f
+  u_amber1/u_execute/u_barrel_shift/o_out\[1\] (a25_barrel_shift_0)                          0.0000     1.6035 f
+  u_amber1/u_execute/u_alu/i_b_in\[1\] (a25_alu_0)                                           0.0000     1.6035 f
+  u_amber1/u_execute/u_alu/U113/B1 (SAEDHVT14_OAI22_0P75)                          0.0083    0.0477     1.6512 f
+  u_amber1/u_execute/u_alu/U113/X (SAEDHVT14_OAI22_0P75)                 0.4151    0.0114    0.0122     1.6635 r
+  u_amber1/u_execute/u_alu/U100/S (SAEDRVT14_MUXI2_2)                              0.0114    0.0766     1.7400 r
+  u_amber1/u_execute/u_alu/U100/X (SAEDRVT14_MUXI2_2)                    0.6593    0.0020    0.0160     1.7560 f
+  u_amber1/u_execute/u_alu/add_x_8/A\[1\] (a25_alu_0_DW01_add_J10_0_0)                       0.0000     1.7560 f
+  u_amber1/u_execute/u_alu/add_x_8/U113/B (SAEDRVT14_ADDF_V2_0P5)                  0.0020    0.1216     1.8776 f
+  u_amber1/u_execute/u_alu/add_x_8/U113/CO (SAEDRVT14_ADDF_V2_0P5)       0.3800    0.0046    0.0225     1.9001 f
+  u_amber1/u_execute/u_alu/add_x_8/U126/A (SAEDLVT14_ADDF_V2_0P5)                  0.0046    0.0701     1.9702 f
+  u_amber1/u_execute/u_alu/add_x_8/U126/CO (SAEDLVT14_ADDF_V2_0P5)       0.3800    0.0039    0.0202     1.9904 f
+  u_amber1/u_execute/u_alu/add_x_8/U159/A (SAEDLVT14_ADDF_V2_0P5)                  0.0039    0.0701     2.0605 f
+  u_amber1/u_execute/u_alu/add_x_8/U159/CO (SAEDLVT14_ADDF_V2_0P5)       0.3800    0.0039    0.0199     2.0804 f
+  u_amber1/u_execute/u_alu/add_x_8/U110/A (SAEDLVT14_ADDF_V2_0P5)                  0.0039    0.0701     2.1505 f
+  u_amber1/u_execute/u_alu/add_x_8/U110/CO (SAEDLVT14_ADDF_V2_0P5)       0.3800    0.0039    0.0199     2.1704 f
+  u_amber1/u_execute/u_alu/add_x_8/U142/A (SAEDLVT14_ADDF_V2_0P5)                  0.0039    0.0701     2.2405 f
+  u_amber1/u_execute/u_alu/add_x_8/U142/CO (SAEDLVT14_ADDF_V2_0P5)       0.3800    0.0039    0.0199     2.2604 f
+  u_amber1/u_execute/u_alu/add_x_8/U132/A (SAEDLVT14_ADDF_V2_0P5)                  0.0039    0.0701     2.3305 f
+  u_amber1/u_execute/u_alu/add_x_8/U132/CO (SAEDLVT14_ADDF_V2_0P5)       0.3800    0.0039    0.0199     2.3505 f
+  u_amber1/u_execute/u_alu/add_x_8/U141/A (SAEDLVT14_ADDF_V2_0P5)                  0.0039    0.0701     2.4206 f
+  u_amber1/u_execute/u_alu/add_x_8/U141/CO (SAEDLVT14_ADDF_V2_0P5)       0.3800    0.0039    0.0199     2.4405 f
+  u_amber1/u_execute/u_alu/add_x_8/U131/A (SAEDLVT14_ADDF_V2_0P5)                  0.0039    0.0701     2.5106 f
+  u_amber1/u_execute/u_alu/add_x_8/U131/CO (SAEDLVT14_ADDF_V2_0P5)       0.3800    0.0039    0.0199     2.5305 f
+  u_amber1/u_execute/u_alu/add_x_8/U144/A (SAEDLVT14_ADDF_V2_0P5)                  0.0039    0.0701     2.6006 f
+  u_amber1/u_execute/u_alu/add_x_8/U144/CO (SAEDLVT14_ADDF_V2_0P5)       0.3800    0.0039    0.0199     2.6205 f
+  u_amber1/u_execute/u_alu/add_x_8/U146/A (SAEDLVT14_ADDF_V2_0P5)                  0.0039    0.0701     2.6906 f
+  u_amber1/u_execute/u_alu/add_x_8/U146/CO (SAEDLVT14_ADDF_V2_0P5)       0.8517    0.0055    0.0217     2.7123 f
+  u_amber1/u_execute/u_alu/add_x_8/U166/A1 (SAEDHVT14_ND2_ECO_1)                   0.0055    0.0763     2.7886 f
+  u_amber1/u_execute/u_alu/add_x_8/U166/X (SAEDHVT14_ND2_ECO_1)          0.2372    0.0043    0.0064     2.7950 r
+  u_amber1/u_execute/u_alu/add_x_8/U147/B (SAEDHVT14_OAI21_0P5)                    0.0043    0.0438     2.8387 r
+  u_amber1/u_execute/u_alu/add_x_8/U147/X (SAEDHVT14_OAI21_0P5)          0.3800    0.0063    0.0073     2.8460 f
+  u_amber1/u_execute/u_alu/add_x_8/U138/A (SAEDLVT14_ADDF_V2_0P5)                  0.0063    0.0701     2.9161 f
+  u_amber1/u_execute/u_alu/add_x_8/U138/CO (SAEDLVT14_ADDF_V2_0P5)       0.8687    0.0056    0.0227     2.9388 f
+  u_amber1/u_execute/u_alu/add_x_8/U157/A1 (SAEDHVT14_ND2_ECO_1)                   0.0056    0.0763     3.0151 f
+  u_amber1/u_execute/u_alu/add_x_8/U157/X (SAEDHVT14_ND2_ECO_1)          0.2372    0.0043    0.0064     3.0215 r
+  u_amber1/u_execute/u_alu/add_x_8/U140/B (SAEDHVT14_OAI21_0P5)                    0.0043    0.0438     3.0653 r
+  u_amber1/u_execute/u_alu/add_x_8/U140/X (SAEDHVT14_OAI21_0P5)          0.3800    0.0062    0.0073     3.0726 f
+  u_amber1/u_execute/u_alu/add_x_8/U149/A (SAEDLVT14_ADDF_V2_0P5)                  0.0062    0.0701     3.1427 f
+  u_amber1/u_execute/u_alu/add_x_8/U149/CO (SAEDLVT14_ADDF_V2_0P5)       0.3800    0.0039    0.0209     3.1636 f
+  u_amber1/u_execute/u_alu/add_x_8/U143/A (SAEDLVT14_ADDF_V2_0P5)                  0.0039    0.0701     3.2337 f
+  u_amber1/u_execute/u_alu/add_x_8/U143/CO (SAEDLVT14_ADDF_V2_0P5)       0.3800    0.0039    0.0199     3.2536 f
+  u_amber1/u_execute/u_alu/add_x_8/U150/A (SAEDLVT14_ADDF_V2_0P5)                  0.0039    0.0701     3.3237 f
+  u_amber1/u_execute/u_alu/add_x_8/U150/CO (SAEDLVT14_ADDF_V2_0P5)       0.6109    0.0047    0.0208     3.3445 f
+  u_amber1/u_execute/u_alu/add_x_8/U164/A1 (SAEDHVT14_ND2_ECO_1)                   0.0047    0.0692     3.4138 f
+  u_amber1/u_execute/u_alu/add_x_8/U164/X (SAEDHVT14_ND2_ECO_1)          0.3233    0.0047    0.0065     3.4202 r
+  u_amber1/u_execute/u_alu/add_x_8/U155/A1 (SAEDHVT14_ND2_ECO_1)                   0.0047    0.0596     3.4798 r
+  u_amber1/u_execute/u_alu/add_x_8/U155/X (SAEDHVT14_ND2_ECO_1)          0.3800    0.0047    0.0058     3.4857 f
+  u_amber1/u_execute/u_alu/add_x_8/U135/A (SAEDLVT14_ADDF_V2_0P5)                  0.0047    0.0701     3.5557 f
+  u_amber1/u_execute/u_alu/add_x_8/U135/CO (SAEDLVT14_ADDF_V2_0P5)       0.6109    0.0047    0.0212     3.5769 f
+  u_amber1/u_execute/u_alu/add_x_8/U161/A1 (SAEDHVT14_ND2_ECO_1)                   0.0047    0.0692     3.6462 f
+  u_amber1/u_execute/u_alu/add_x_8/U161/X (SAEDHVT14_ND2_ECO_1)          0.3233    0.0047    0.0065     3.6526 r
+  u_amber1/u_execute/u_alu/add_x_8/U152/A1 (SAEDHVT14_ND2_ECO_1)                   0.0047    0.0596     3.7123 r
+  u_amber1/u_execute/u_alu/add_x_8/U152/X (SAEDHVT14_ND2_ECO_1)          0.3800    0.0047    0.0058     3.7181 f
+  u_amber1/u_execute/u_alu/add_x_8/U136/A (SAEDLVT14_ADDF_V2_0P5)                  0.0047    0.0701     3.7882 f
+  u_amber1/u_execute/u_alu/add_x_8/U136/CO (SAEDLVT14_ADDF_V2_0P5)       0.6109    0.0047    0.0212     3.8093 f
+  u_amber1/u_execute/u_alu/add_x_8/U162/A1 (SAEDHVT14_ND2_ECO_1)                   0.0047    0.0692     3.8786 f
+  u_amber1/u_execute/u_alu/add_x_8/U162/X (SAEDHVT14_ND2_ECO_1)          0.3233    0.0047    0.0065     3.8850 r
+  u_amber1/u_execute/u_alu/add_x_8/U153/A1 (SAEDHVT14_ND2_ECO_1)                   0.0047    0.0596     3.9447 r
+  u_amber1/u_execute/u_alu/add_x_8/U153/X (SAEDHVT14_ND2_ECO_1)          0.3800    0.0047    0.0058     3.9505 f
+  u_amber1/u_execute/u_alu/add_x_8/U134/A (SAEDLVT14_ADDF_V2_0P5)                  0.0047    0.0701     4.0206 f
+  u_amber1/u_execute/u_alu/add_x_8/U134/CO (SAEDLVT14_ADDF_V2_0P5)       0.6109    0.0047    0.0212     4.0417 f
+  u_amber1/u_execute/u_alu/add_x_8/U160/A1 (SAEDHVT14_ND2_ECO_1)                   0.0047    0.0692     4.1110 f
+  u_amber1/u_execute/u_alu/add_x_8/U160/X (SAEDHVT14_ND2_ECO_1)          0.3233    0.0047    0.0065     4.1174 r
+  u_amber1/u_execute/u_alu/add_x_8/U151/A1 (SAEDHVT14_ND2_ECO_1)                   0.0047    0.0596     4.1771 r
+  u_amber1/u_execute/u_alu/add_x_8/U151/X (SAEDHVT14_ND2_ECO_1)          0.3800    0.0047    0.0058     4.1829 f
+  u_amber1/u_execute/u_alu/add_x_8/U158/A (SAEDLVT14_ADDF_V2_0P5)                  0.0047    0.0701     4.2530 f
+  u_amber1/u_execute/u_alu/add_x_8/U158/CO (SAEDLVT14_ADDF_V2_0P5)       0.8687    0.0056    0.0220     4.2750 f
+  u_amber1/u_execute/u_alu/add_x_8/U156/A1 (SAEDHVT14_ND2_ECO_1)                   0.0056    0.0763     4.3513 f
+  u_amber1/u_execute/u_alu/add_x_8/U156/X (SAEDHVT14_ND2_ECO_1)          0.2372    0.0043    0.0064     4.3577 r
+  u_amber1/u_execute/u_alu/add_x_8/U139/B (SAEDHVT14_OAI21_0P5)                    0.0043    0.0438     4.4015 r
+  u_amber1/u_execute/u_alu/add_x_8/U139/X (SAEDHVT14_OAI21_0P5)          0.3800    0.0063    0.0073     4.4088 f
+  u_amber1/u_execute/u_alu/add_x_8/U148/A (SAEDLVT14_ADDF_V2_0P5)                  0.0063    0.0701     4.4789 f
+  u_amber1/u_execute/u_alu/add_x_8/U148/CO (SAEDLVT14_ADDF_V2_0P5)       0.6109    0.0047    0.0218     4.5007 f
+  u_amber1/u_execute/u_alu/add_x_8/U163/A1 (SAEDHVT14_ND2_ECO_1)                   0.0047    0.0692     4.5700 f
+  u_amber1/u_execute/u_alu/add_x_8/U163/X (SAEDHVT14_ND2_ECO_1)          0.3233    0.0047    0.0064     4.5764 r
+  u_amber1/u_execute/u_alu/add_x_8/U154/A1 (SAEDHVT14_ND2_ECO_1)                   0.0047    0.0596     4.6360 r
+  u_amber1/u_execute/u_alu/add_x_8/U154/X (SAEDHVT14_ND2_ECO_1)          0.3800    0.0047    0.0058     4.6418 f
+  u_amber1/u_execute/u_alu/add_x_8/U137/A (SAEDLVT14_ADDF_V2_0P5)                  0.0047    0.0701     4.7119 f
+  u_amber1/u_execute/u_alu/add_x_8/U137/CO (SAEDLVT14_ADDF_V2_0P5)       0.4878    0.0042    0.0207     4.7326 f
+  u_amber1/u_execute/u_alu/add_x_8/U99/B (SAEDHVT14_ND2B_U_0P5)                    0.0042    0.0429     4.7755 f
+  u_amber1/u_execute/u_alu/add_x_8/U99/X (SAEDHVT14_ND2B_U_0P5)          0.3233    0.0043    0.0057     4.7813 r
+  u_amber1/u_execute/u_alu/add_x_8/U130/A1 (SAEDHVT14_ND2_ECO_1)                   0.0043    0.0596     4.8409 r
+  u_amber1/u_execute/u_alu/add_x_8/U130/X (SAEDHVT14_ND2_ECO_1)          0.3800    0.0047    0.0056     4.8465 f
+  u_amber1/u_execute/u_alu/add_x_8/U145/A (SAEDLVT14_ADDF_V2_0P5)                  0.0047    0.0701     4.9166 f
+  u_amber1/u_execute/u_alu/add_x_8/U145/S (SAEDLVT14_ADDF_V2_0P5)        0.2565    0.0026    0.0201     4.9367 r
+  u_amber1/u_execute/u_alu/add_x_8/SUM\[30\] (a25_alu_0_DW01_add_J10_0_0)                    0.0000     4.9367 r
+  u_amber1/u_execute/u_alu/U108/A1 (SAEDRVT14_AO21B_0P5)                           0.0026    0.0473     4.9840 r
+  u_amber1/u_execute/u_alu/U108/X (SAEDRVT14_AO21B_0P5)                  0.4223    0.0051    0.0101     4.9941 r
+  u_amber1/u_execute/u_alu/U109/B (SAEDRVT14_AO21_U_0P5)                           0.0051    0.0452     5.0392 r
+  u_amber1/u_execute/u_alu/U109/X (SAEDRVT14_AO21_U_0P5)                 0.5259    0.0050    0.0094     5.0486 r
+  u_amber1/u_execute/u_alu/o_out\[30\] (a25_alu_0)                                           0.0000     5.0486 r
+  u_amber1/u_execute/U88/A (SAEDRVT14_BUF_U_0P5)                                   0.0050    0.0615     5.1102 r
+  u_amber1/u_execute/U88/X (SAEDRVT14_BUF_U_0P5)                         1.4998    0.0102    0.0129     5.1231 r
+  u_amber1/u_execute/add_x_11/A\[30\] (a25_execute_0_DW01_add_J3_1_0)                        0.0000     5.1231 r
+  u_amber1/u_execute/add_x_11/U92/B (SAEDHVT14_AN2B_PMM_2)                         0.0102    0.0878     5.2108 r
+  u_amber1/u_execute/add_x_11/U92/X (SAEDHVT14_AN2B_PMM_2)               0.2740    0.0022    0.0103     5.2212 r
+  u_amber1/u_execute/add_x_11/U110/A2 (SAEDLVT14_EO2_1)                            0.0022    0.0505     5.2717 r
+  u_amber1/u_execute/add_x_11/U110/X (SAEDLVT14_EO2_1)                   0.2367    0.0025    0.0122     5.2839 f
+  u_amber1/u_execute/add_x_11/SUM\[31\] (a25_execute_0_DW01_add_J3_1_0)                      0.0000     5.2839 f
+  u_amber1/u_execute/U85/A1 (SAEDRVT14_OA2BB2_V1_0P5)                              0.0025    0.0437     5.3276 f
+  u_amber1/u_execute/U85/X (SAEDRVT14_OA2BB2_V1_0P5)                     0.3233    0.0073    0.0082     5.3357 r
+  u_amber1/u_execute/U309/A1 (SAEDHVT14_ND2_ECO_1)                                 0.0073    0.0596     5.3954 r
+  u_amber1/u_execute/U309/X (SAEDHVT14_ND2_ECO_1)                        0.2040    0.0044    0.0059     5.4013 f
+  u_amber1/u_execute/U327/A1 (SAEDHVT14_AO22_1)                                    0.0044    0.0430     5.4443 f
+  u_amber1/u_execute/U327/X (SAEDHVT14_AO22_1)                           0.2783    0.0034    0.0157     5.4600 f
+  u_amber1/u_execute/o_daddress_reg\[31\]/D (SAEDLVT14_FDP_V2LP_1)                 0.0034    0.0513     5.5113 f
+  data arrival time                                                                                     5.5113
 
-  clock BRD_CLK_P (rise edge)                                                           3.0000     3.0000
-  clock network delay (ideal)                                                           0.0000     3.0000
-  u_amber0/u_execute/status_bits_flags_reg_3_/CK (SAEDLVT14_FDPQB_V2LP_1)               0.0000     3.0000 r
-  library setup time                                                                   -0.0053     2.9947
-  data required time                                                                               2.9947
-  ----------------------------------------------------------------------------------------------------------
-  data required time                                                                               2.9947
-  data arrival time                                                                               -6.2540
-  ----------------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                                -3.2593
+  clock BRD_CLK_P (rise edge)                                                                3.0000     3.0000
+  clock network delay (ideal)                                                                0.0000     3.0000
+  u_amber1/u_execute/o_daddress_reg\[31\]/CK (SAEDLVT14_FDP_V2LP_1)                          0.0000     3.0000 r
+  library setup time                                                                        -0.0054     2.9946
+  data required time                                                                                    2.9946
+  ---------------------------------------------------------------------------------------------------------------
+  data required time                                                                                    2.9946
+  data arrival time                                                                                    -5.5113
+  ---------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                     -2.5167
 
 
-  Startpoint: u_eth_top/rxethmac1/rxcounters1/ByteCnt_reg_2_
+  Startpoint: u_eth_top/rxethmac1/rxcounters1/ByteCnt_reg\[2\]
               (rising edge-triggered flip-flop clocked by mrx_clk)
-  Endpoint: u_eth_top/maccontrol1/receivecontrol1/PauseTimer_reg_1_
+  Endpoint: u_eth_top/maccontrol1/receivecontrol1/PauseTimer_reg\[1\]
             (rising edge-triggered flip-flop clocked by mrx_clk)
   Path Group: mrx_clk
   Path Type: max
 
   Des/Clust/Port     Wire Load Model       Library
   ------------------------------------------------
-  system             140000                saed14lvt_dlvl_tt0p8v25c_i0p8v
+  system             70000                 saed14lvt_dlvl_tt0p8v25c_i0p8v
 
-  Point                                                                           Cap     Trans      Incr       Path
-  ---------------------------------------------------------------------------------------------------------------------
-  clock mrx_clk (rise edge)                                                                        0.0000     0.0000
-  clock network delay (ideal)                                                                      0.0000     0.0000
-  u_eth_top/rxethmac1/rxcounters1/ByteCnt_reg_2_/CK (SAEDRVT14_FDPRBQ_V2_0P5)            0.0000    0.0000     0.0000 r
-  u_eth_top/rxethmac1/rxcounters1/ByteCnt_reg_2_/Q (SAEDRVT14_FDPRBQ_V2_0P5)   3.8669    0.0251    0.0346     0.0346 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/A[2] (eth_rxcounters_DW01_add_J10_0)                     0.0000     0.0346 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U54/A (SAEDRVT14_ADDH_0P5)                     0.0251    0.2789     0.3135 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U54/CO (SAEDRVT14_ADDH_0P5)          0.6867    0.0057    0.0151     0.3286 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U53/A (SAEDRVT14_ADDH_0P5)                     0.0057    0.1387     0.4673 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U53/CO (SAEDRVT14_ADDH_0P5)          0.6867    0.0057    0.0103     0.4776 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U52/A (SAEDRVT14_ADDH_0P5)                     0.0057    0.1387     0.6163 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U52/CO (SAEDRVT14_ADDH_0P5)          0.6867    0.0057    0.0103     0.6266 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U51/A (SAEDRVT14_ADDH_0P5)                     0.0057    0.1387     0.7653 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U51/CO (SAEDRVT14_ADDH_0P5)          0.6867    0.0056    0.0103     0.7756 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U50/A (SAEDRVT14_ADDH_0P5)                     0.0056    0.1387     0.9143 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U50/CO (SAEDRVT14_ADDH_0P5)          0.6867    0.0056    0.0103     0.9245 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U49/A (SAEDRVT14_ADDH_0P5)                     0.0056    0.1387     1.0632 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U49/CO (SAEDRVT14_ADDH_0P5)          0.6867    0.0056    0.0103     1.0735 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U48/A (SAEDRVT14_ADDH_0P5)                     0.0056    0.1387     1.2122 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U48/CO (SAEDRVT14_ADDH_0P5)          0.6867    0.0056    0.0103     1.2225 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U47/A (SAEDRVT14_ADDH_0P5)                     0.0056    0.1387     1.3612 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U47/CO (SAEDRVT14_ADDH_0P5)          0.6867    0.0056    0.0103     1.3715 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U46/A (SAEDRVT14_ADDH_0P5)                     0.0056    0.1387     1.5102 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U46/CO (SAEDRVT14_ADDH_0P5)          0.6867    0.0056    0.0103     1.5204 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U45/A (SAEDRVT14_ADDH_0P5)                     0.0056    0.1387     1.6591 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U45/CO (SAEDRVT14_ADDH_0P5)          0.6867    0.0057    0.0103     1.6694 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U44/A (SAEDRVT14_ADDH_0P5)                     0.0057    0.1387     1.8081 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U44/CO (SAEDRVT14_ADDH_0P5)          0.6867    0.0056    0.0103     1.8184 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U43/A (SAEDRVT14_ADDH_0P5)                     0.0056    0.1387     1.9571 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U43/CO (SAEDRVT14_ADDH_0P5)          0.6867    0.0056    0.0103     1.9674 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U42/A (SAEDRVT14_ADDH_0P5)                     0.0056    0.1387     2.1061 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U42/CO (SAEDRVT14_ADDH_0P5)          0.5925    0.0051    0.0098     2.1159 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U41/A1 (SAEDHVT14_EO2_V1_0P75)                 0.0051    0.1197     2.2356 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/U41/X (SAEDHVT14_EO2_V1_0P75)        2.5877    0.0233    0.0221     2.2577 r
-  u_eth_top/rxethmac1/rxcounters1/add_x_4/SUM[15] (eth_rxcounters_DW01_add_J10_0)                  0.0000     2.2577 r
-  u_eth_top/rxethmac1/rxcounters1/ByteCntOut[15] (eth_rxcounters)                                  0.0000     2.2577 r
-  u_eth_top/rxethmac1/ByteCnt[15] (eth_rxethmac)                                                   0.0000     2.2577 r
-  u_eth_top/macstatus1/RxByteCnt[15] (eth_macstatus)                                               0.0000     2.2577 r
-  u_eth_top/macstatus1/lte_x_4/A[15] (eth_macstatus_DW_cmp_J9_3)                                   0.0000     2.2577 r
-  u_eth_top/macstatus1/lte_x_4/U449/A (SAEDHVT14_INV_0P5)                                0.0233    0.1097     2.3675 r
-  u_eth_top/macstatus1/lte_x_4/U449/X (SAEDHVT14_INV_0P5)                      0.9621    0.0103    0.0151     2.3825 f
-  u_eth_top/macstatus1/lte_x_4/U451/A1 (SAEDHVT14_OA2BB2_V1_1)                           0.0103    0.1218     2.5044 f
-  u_eth_top/macstatus1/lte_x_4/U451/X (SAEDHVT14_OA2BB2_V1_1)                  0.6677    0.0108    0.0127     2.5171 r
-  u_eth_top/macstatus1/lte_x_4/U455/B (SAEDHVT14_AN2B_MM_1)                              0.0108    0.0887     2.6057 r
-  u_eth_top/macstatus1/lte_x_4/U455/X (SAEDHVT14_AN2B_MM_1)                    0.5978    0.0038    0.0129     2.6186 r
-  u_eth_top/macstatus1/lte_x_4/U488/B1 (SAEDHVT14_AO221_0P5)                             0.0038    0.0762     2.6948 r
-  u_eth_top/macstatus1/lte_x_4/U488/X (SAEDHVT14_AO221_0P5)                    0.2879    0.0058    0.0170     2.7118 r
-  u_eth_top/macstatus1/lte_x_4/U489/B (SAEDHVT14_AOI21_0P5)                              0.0058    0.0582     2.7699 r
-  u_eth_top/macstatus1/lte_x_4/U489/X (SAEDHVT14_AOI21_0P5)                    0.2587    0.0063    0.0056     2.7756 f
-  u_eth_top/macstatus1/lte_x_4/GE_LT_GT_LE (eth_macstatus_DW_cmp_J9_3)                             0.0000     2.7756 f
-  u_eth_top/macstatus1/U55/A1 (SAEDRVT14_AN2_MM_0P5)                                     0.0063    0.0523     2.8278 f
-  u_eth_top/macstatus1/U55/X (SAEDRVT14_AN2_MM_0P5)                            0.2969    0.0027    0.0081     2.8359 f
-  u_eth_top/macstatus1/ReceivedLengthOK (eth_macstatus)                                            0.0000     2.8359 f
-  u_eth_top/maccontrol1/ReceivedLengthOK (eth_maccontrol)                                          0.0000     2.8359 f
-  u_eth_top/maccontrol1/receivecontrol1/ReceivedLengthOK (eth_receivecontrol)                      0.0000     2.8359 f
-  u_eth_top/maccontrol1/receivecontrol1/U39/A1 (SAEDHVT14_AN4_0P75)                      0.0027    0.0600     2.8959 f
-  u_eth_top/maccontrol1/receivecontrol1/U39/X (SAEDHVT14_AN4_0P75)             0.3248    0.0036    0.0095     2.9054 f
-  u_eth_top/maccontrol1/receivecontrol1/U32/A2 (SAEDHVT14_ND2_CDC_0P5)                   0.0036    0.0656     2.9710 f
-  u_eth_top/maccontrol1/receivecontrol1/U32/X (SAEDHVT14_ND2_CDC_0P5)          0.9908    0.0073    0.0067     2.9777 r
-  u_eth_top/maccontrol1/receivecontrol1/U33/A (SAEDHVT14_INV_0P5)                        0.0073    0.0710     3.0487 r
-  u_eth_top/maccontrol1/receivecontrol1/U33/X (SAEDHVT14_INV_0P5)              1.4454    0.0092    0.0107     3.0594 f
-  u_eth_top/maccontrol1/receivecontrol1/U48/B (SAEDHVT14_AOI21_0P5)                      0.0092    0.0906     3.1500 f
-  u_eth_top/maccontrol1/receivecontrol1/U48/X (SAEDHVT14_AOI21_0P5)            0.5325    0.0082    0.0097     3.1598 r
-  u_eth_top/maccontrol1/receivecontrol1/U49/A2 (SAEDHVT14_NR2_MM_0P5)                    0.0082    0.0673     3.2271 r
-  u_eth_top/maccontrol1/receivecontrol1/U49/X (SAEDHVT14_NR2_MM_0P5)           2.0882    0.0134    0.0148     3.2419 f
-  u_eth_top/maccontrol1/receivecontrol1/U15/A (SAEDHVT14_INV_0P5)                        0.0134    0.0777     3.3195 f
-  u_eth_top/maccontrol1/receivecontrol1/U15/X (SAEDHVT14_INV_0P5)              0.7420    0.0068    0.0095     3.3290 r
-  u_eth_top/maccontrol1/receivecontrol1/U18/A (SAEDHVT14_INV_0P5)                        0.0068    0.0646     3.3937 r
-  u_eth_top/maccontrol1/receivecontrol1/U18/X (SAEDHVT14_INV_0P5)              2.1424    0.0127    0.0131     3.4068 f
-  u_eth_top/maccontrol1/receivecontrol1/U52/C2 (SAEDHVT14_AO222_1)                       0.0127    0.1535     3.5603 f
-  u_eth_top/maccontrol1/receivecontrol1/U52/X (SAEDHVT14_AO222_1)              0.2632    0.0045    0.0342     3.5945 f
-  u_eth_top/maccontrol1/receivecontrol1/PauseTimer_reg_1_/D (SAEDRVT14_FDPRBQ_V2_0P5)    0.0045    0.0532     3.6476 f
-  data arrival time                                                                                           3.6476
+  Point                                                                             Cap     Trans      Incr       Path
+  -----------------------------------------------------------------------------------------------------------------------
+  clock mrx_clk (rise edge)                                                                          0.0000     0.0000
+  clock network delay (ideal)                                                                        0.0000     0.0000
+  u_eth_top/rxethmac1/rxcounters1/ByteCnt_reg\[2\]/CK (SAEDRVT14_FDPRBQ_V2_0P5)            0.0000    0.0000     0.0000 r
+  u_eth_top/rxethmac1/rxcounters1/ByteCnt_reg\[2\]/Q (SAEDRVT14_FDPRBQ_V2_0P5)   3.8360    0.0249    0.0344     0.0344 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/A\[2\] (eth_rxcounters_DW01_add_J12_0)                     0.0000     0.0344 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U54/A (SAEDHVT14_ADDH_0P5)                       0.0249    0.2389     0.2733 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U54/CO (SAEDHVT14_ADDH_0P5)            0.6752    0.0064    0.0171     0.2904 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U53/A (SAEDHVT14_ADDH_0P5)                       0.0064    0.1245     0.4149 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U53/CO (SAEDHVT14_ADDH_0P5)            0.6752    0.0064    0.0117     0.4266 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U52/A (SAEDHVT14_ADDH_0P5)                       0.0064    0.1245     0.5512 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U52/CO (SAEDHVT14_ADDH_0P5)            0.6752    0.0064    0.0117     0.5628 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U51/A (SAEDHVT14_ADDH_0P5)                       0.0064    0.1245     0.6874 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U51/CO (SAEDHVT14_ADDH_0P5)            0.6752    0.0064    0.0117     0.6991 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U50/A (SAEDHVT14_ADDH_0P5)                       0.0064    0.1245     0.8236 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U50/CO (SAEDHVT14_ADDH_0P5)            0.6752    0.0063    0.0117     0.8353 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U49/A (SAEDHVT14_ADDH_0P5)                       0.0063    0.1245     0.9598 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U49/CO (SAEDHVT14_ADDH_0P5)            0.6752    0.0063    0.0117     0.9715 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U48/A (SAEDHVT14_ADDH_0P5)                       0.0063    0.1245     1.0960 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U48/CO (SAEDHVT14_ADDH_0P5)            0.6752    0.0064    0.0117     1.1077 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U47/A (SAEDHVT14_ADDH_0P5)                       0.0064    0.1245     1.2322 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U47/CO (SAEDHVT14_ADDH_0P5)            0.6752    0.0063    0.0117     1.2439 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U46/A (SAEDHVT14_ADDH_0P5)                       0.0063    0.1245     1.3684 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U46/CO (SAEDHVT14_ADDH_0P5)            0.6752    0.0064    0.0117     1.3801 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U45/A (SAEDHVT14_ADDH_0P5)                       0.0064    0.1245     1.5047 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U45/CO (SAEDHVT14_ADDH_0P5)            0.6752    0.0064    0.0117     1.5163 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U44/A (SAEDHVT14_ADDH_0P5)                       0.0064    0.1245     1.6409 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U44/CO (SAEDHVT14_ADDH_0P5)            0.6752    0.0064    0.0117     1.6526 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U43/A (SAEDHVT14_ADDH_0P5)                       0.0064    0.1245     1.7771 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U43/CO (SAEDHVT14_ADDH_0P5)            0.6752    0.0064    0.0117     1.7888 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U42/A (SAEDHVT14_ADDH_0P5)                       0.0064    0.1245     1.9133 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U42/CO (SAEDHVT14_ADDH_0P5)            0.5922    0.0058    0.0113     1.9246 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U41/A1 (SAEDHVT14_EO2_V1_0P75)                   0.0058    0.1092     2.0338 r
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/U41/X (SAEDHVT14_EO2_V1_0P75)          2.5802    0.0299    0.0254     2.0592 f
+  u_eth_top/rxethmac1/rxcounters1/add_x_4/SUM\[15\] (eth_rxcounters_DW01_add_J12_0)                  0.0000     2.0592 f
+  u_eth_top/rxethmac1/rxcounters1/ByteCntOut\[15\] (eth_rxcounters)                                  0.0000     2.0592 f
+  u_eth_top/rxethmac1/ByteCnt\[15\] (eth_rxethmac)                                                   0.0000     2.0592 f
+  u_eth_top/macstatus1/RxByteCnt\[15\] (eth_macstatus)                                               0.0000     2.0592 f
+  u_eth_top/macstatus1/lte_x_4/A\[15\] (eth_macstatus_DW_cmp_J17_3)                                  0.0000     2.0592 f
+  u_eth_top/macstatus1/lte_x_4/U450/A (SAEDHVT14_INV_0P5)                                  0.0299    0.0948     2.1540 f
+  u_eth_top/macstatus1/lte_x_4/U450/X (SAEDHVT14_INV_0P5)                        0.9610    0.0113    0.0151     2.1691 r
+  u_eth_top/macstatus1/lte_x_4/U452/A1 (SAEDHVT14_OA2BB2_V1_1)                             0.0113    0.1097     2.2788 r
+  u_eth_top/macstatus1/lte_x_4/U452/X (SAEDHVT14_OA2BB2_V1_1)                    0.6671    0.0097    0.0116     2.2904 f
+  u_eth_top/macstatus1/lte_x_4/U456/B (SAEDHVT14_AN2B_MM_1)                                0.0097    0.0804     2.3708 f
+  u_eth_top/macstatus1/lte_x_4/U456/X (SAEDHVT14_AN2B_MM_1)                      0.5972    0.0029    0.0110     2.3817 f
+  u_eth_top/macstatus1/lte_x_4/U488/B1 (SAEDHVT14_AO221_0P5)                               0.0029    0.0691     2.4508 f
+  u_eth_top/macstatus1/lte_x_4/U488/X (SAEDHVT14_AO221_0P5)                      0.2876    0.0049    0.0195     2.4703 f
+  u_eth_top/macstatus1/lte_x_4/U489/B (SAEDHVT14_AOI21_0P5)                                0.0049    0.0530     2.5233 f
+  u_eth_top/macstatus1/lte_x_4/U489/X (SAEDHVT14_AOI21_0P5)                      0.2584    0.0054    0.0064     2.5297 r
+  u_eth_top/macstatus1/lte_x_4/GE_LT_GT_LE (eth_macstatus_DW_cmp_J17_3)                              0.0000     2.5297 r
+  u_eth_top/macstatus1/U50/A1 (SAEDRVT14_AN2_MM_0P5)                                       0.0054    0.0477     2.5774 r
+  u_eth_top/macstatus1/U50/X (SAEDRVT14_AN2_MM_0P5)                              0.2966    0.0031    0.0080     2.5854 r
+  u_eth_top/macstatus1/ReceivedLengthOK (eth_macstatus)                                              0.0000     2.5854 r
+  u_eth_top/maccontrol1/ReceivedLengthOK (eth_maccontrol)                                            0.0000     2.5854 r
+  u_eth_top/maccontrol1/receivecontrol1/ReceivedLengthOK (eth_receivecontrol)                        0.0000     2.5854 r
+  u_eth_top/maccontrol1/receivecontrol1/U204/A1 (SAEDHVT14_AN4_0P75)                       0.0031    0.0547     2.6401 r
+  u_eth_top/maccontrol1/receivecontrol1/U204/X (SAEDHVT14_AN4_0P75)              0.3245    0.0044    0.0115     2.6516 r
+  u_eth_top/maccontrol1/receivecontrol1/U13/A2 (SAEDHVT14_ND2_CDC_0P5)                     0.0044    0.0599     2.7115 r
+  u_eth_top/maccontrol1/receivecontrol1/U13/X (SAEDHVT14_ND2_CDC_0P5)            0.9891    0.0068    0.0070     2.7185 f
+  u_eth_top/maccontrol1/receivecontrol1/U14/A (SAEDHVT14_INV_0P5)                          0.0068    0.0634     2.7819 f
+  u_eth_top/maccontrol1/receivecontrol1/U14/X (SAEDHVT14_INV_0P5)                1.3617    0.0078    0.0091     2.7910 r
+  u_eth_top/maccontrol1/receivecontrol1/U5/B (SAEDHVT14_AO21_U_0P5)                        0.0078    0.0578     2.8488 r
+  u_eth_top/maccontrol1/receivecontrol1/U5/X (SAEDHVT14_AO21_U_0P5)              0.7409    0.0071    0.0130     2.8618 r
+  u_eth_top/maccontrol1/receivecontrol1/U8/A (SAEDHVT14_INV_0P5)                           0.0071    0.0582     2.9200 r
+  u_eth_top/maccontrol1/receivecontrol1/U8/X (SAEDHVT14_INV_0P5)                 1.9606    0.0117    0.0126     2.9326 f
+  u_eth_top/maccontrol1/receivecontrol1/U207/A2 (SAEDHVT14_NR2_MM_0P5)                     0.0117    0.0864     3.0190 f
+  u_eth_top/maccontrol1/receivecontrol1/U207/X (SAEDHVT14_NR2_MM_0P5)            8.3434    0.0695    0.0572     3.0762 r
+  u_eth_top/maccontrol1/receivecontrol1/U220/C2 (SAEDHVT14_AO222_1)                        0.0695    0.3383     3.4145 r
+  u_eth_top/maccontrol1/receivecontrol1/U220/X (SAEDHVT14_AO222_1)               0.2629    0.0067    0.0369     3.4514 r
+  u_eth_top/maccontrol1/receivecontrol1/PauseTimer_reg\[1\]/D (SAEDRVT14_FDPRBQ_V2_0P5)    0.0067    0.0485     3.4999 r
+  data arrival time                                                                                             3.4999
 
-  clock mrx_clk (rise edge)                                                                       40.0000    40.0000
-  clock network delay (ideal)                                                                      0.0000    40.0000
-  clock uncertainty                                                                               -0.1000    39.9000
-  u_eth_top/maccontrol1/receivecontrol1/PauseTimer_reg_1_/CK (SAEDRVT14_FDPRBQ_V2_0P5)             0.0000    39.9000 r
-  library setup time                                                                              -0.0175    39.8825
-  data required time                                                                                         39.8825
-  ---------------------------------------------------------------------------------------------------------------------
-  data required time                                                                                         39.8825
-  data arrival time                                                                                          -3.6476
-  ---------------------------------------------------------------------------------------------------------------------
-  slack (MET)                                                                                                36.2349
+  clock mrx_clk (rise edge)                                                                         40.0000    40.0000
+  clock network delay (ideal)                                                                        0.0000    40.0000
+  clock uncertainty                                                                                 -0.1000    39.9000
+  u_eth_top/maccontrol1/receivecontrol1/PauseTimer_reg\[1\]/CK (SAEDRVT14_FDPRBQ_V2_0P5)             0.0000    39.9000 r
+  library setup time                                                                                -0.0110    39.8890
+  data required time                                                                                           39.8890
+  -----------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                           39.8890
+  data arrival time                                                                                            -3.4999
+  -----------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                                  36.3891
 
 
-  Startpoint: u_eth_top/txethmac1/txcounters1/NibCnt_reg_1_
+  Startpoint: u_eth_top/txethmac1/txcounters1/NibCnt_reg\[0\]
               (rising edge-triggered flip-flop clocked by mtx_clk)
-  Endpoint: u_eth_top/txethmac1/txcounters1/NibCnt_reg_15_
+  Endpoint: u_eth_top/txethmac1/txcounters1/NibCnt_reg\[15\]
             (rising edge-triggered flip-flop clocked by mtx_clk)
   Path Group: mtx_clk
   Path Type: max
 
   Des/Clust/Port     Wire Load Model       Library
   ------------------------------------------------
-  system             140000                saed14lvt_dlvl_tt0p8v25c_i0p8v
+  system             70000                 saed14lvt_dlvl_tt0p8v25c_i0p8v
 
-  Point                                                                       Cap     Trans      Incr       Path
-  -----------------------------------------------------------------------------------------------------------------
-  clock mtx_clk (rise edge)                                                                    0.0000     0.0000
-  clock network delay (ideal)                                                                  0.0000     0.0000
-  u_eth_top/txethmac1/txcounters1/NibCnt_reg_1_/CK (SAEDRVT14_FDPRBQ_V2_0P5)         0.0000    0.0000     0.0000 r
-  u_eth_top/txethmac1/txcounters1/NibCnt_reg_1_/Q (SAEDRVT14_FDPRBQ_V2_0P5)   2.1019   0.0142   0.0268    0.0268 r
-  u_eth_top/txethmac1/txcounters1/U21/A (SAEDLVT14_AOINV_IW_6)                       0.0142    0.4246     0.4513 r
-  u_eth_top/txethmac1/txcounters1/U21/X (SAEDLVT14_AOINV_IW_6)             0.9868    0.0029    0.0042     0.4555 f
-  u_eth_top/txethmac1/txcounters1/U10/A (SAEDRVT14_INV_0P5)                          0.0029    0.0563     0.5118 f
-  u_eth_top/txethmac1/txcounters1/U10/X (SAEDRVT14_INV_0P5)                0.6763    0.0050    0.0055     0.5173 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/A[1] (eth_txcounters_DW01_inc_J11_1)                 0.0000     0.5173 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U55/B (SAEDRVT14_ADDH_0P5)                 0.0050    0.1366     0.6539 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U55/CO (SAEDRVT14_ADDH_0P5)      0.6867    0.0054    0.0108     0.6647 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U54/A (SAEDRVT14_ADDH_0P5)                 0.0054    0.1387     0.8034 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U54/CO (SAEDRVT14_ADDH_0P5)      0.6867    0.0057    0.0102     0.8136 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U53/A (SAEDRVT14_ADDH_0P5)                 0.0057    0.1387     0.9523 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U53/CO (SAEDRVT14_ADDH_0P5)      0.6867    0.0054    0.0103     0.9626 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U52/A (SAEDRVT14_ADDH_0P5)                 0.0054    0.1387     1.1013 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U52/CO (SAEDRVT14_ADDH_0P5)      0.6867    0.0054    0.0102     1.1115 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U51/A (SAEDRVT14_ADDH_0P5)                 0.0054    0.1387     1.2502 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U51/CO (SAEDRVT14_ADDH_0P5)      0.6867    0.0054    0.0102     1.2604 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U50/A (SAEDRVT14_ADDH_0P5)                 0.0054    0.1387     1.3991 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U50/CO (SAEDRVT14_ADDH_0P5)      0.6867    0.0054    0.0102     1.4093 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U49/A (SAEDRVT14_ADDH_0P5)                 0.0054    0.1387     1.5480 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U49/CO (SAEDRVT14_ADDH_0P5)      0.6867    0.0054    0.0102     1.5582 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U48/A (SAEDRVT14_ADDH_0P5)                 0.0054    0.1387     1.6969 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U48/CO (SAEDRVT14_ADDH_0P5)      0.6867    0.0054    0.0102     1.7071 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U47/A (SAEDRVT14_ADDH_0P5)                 0.0054    0.1387     1.8458 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U47/CO (SAEDRVT14_ADDH_0P5)      0.6867    0.0055    0.0102     1.8560 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U46/A (SAEDRVT14_ADDH_0P5)                 0.0055    0.1387     1.9947 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U46/CO (SAEDRVT14_ADDH_0P5)      0.6867    0.0055    0.0102     2.0049 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U45/A (SAEDRVT14_ADDH_0P5)                 0.0055    0.1387     2.1436 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U45/CO (SAEDRVT14_ADDH_0P5)      0.6867    0.0055    0.0102     2.1538 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U44/A (SAEDRVT14_ADDH_0P5)                 0.0055    0.1387     2.2925 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U44/CO (SAEDRVT14_ADDH_0P5)      0.6867    0.0055    0.0102     2.3027 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U56/A (SAEDRVT14_ADDH_0P5)                 0.0055    0.1387     2.4414 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U56/CO (SAEDRVT14_ADDH_0P5)      0.6867    0.0055    0.0102     2.4517 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U57/A (SAEDRVT14_ADDH_0P5)                 0.0055    0.1387     2.5904 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U57/CO (SAEDRVT14_ADDH_0P5)      0.5925    0.0049    0.0098     2.6002 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U58/A1 (SAEDHVT14_EO2_V1_0P75)             0.0049    0.1197     2.7199 r
-  u_eth_top/txethmac1/txcounters1/add_x_1/U58/X (SAEDHVT14_EO2_V1_0P75)    0.3085    0.0075    0.0087     2.7285 f
-  u_eth_top/txethmac1/txcounters1/add_x_1/SUM[15] (eth_txcounters_DW01_inc_J11_1)              0.0000     2.7285 f
-  u_eth_top/txethmac1/txcounters1/U125/A2 (SAEDHVT14_OA221_U_0P5)                    0.0075    0.0623     2.7908 f
-  u_eth_top/txethmac1/txcounters1/U125/X (SAEDHVT14_OA221_U_0P5)           0.2632    0.0054    0.0238     2.8147 f
-  u_eth_top/txethmac1/txcounters1/NibCnt_reg_15_/D (SAEDRVT14_FDPRBQ_V2_0P5)         0.0054    0.0532     2.8678 f
-  data arrival time                                                                                       2.8678
+  Point                                                                         Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------------------------------------------
+  clock mtx_clk (rise edge)                                                                      0.0000     0.0000
+  clock network delay (ideal)                                                                    0.0000     0.0000
+  u_eth_top/txethmac1/txcounters1/NibCnt_reg\[0\]/CK (SAEDRVT14_FDPRBQ_V2_0P5)         0.0000    0.0000     0.0000 r
+  u_eth_top/txethmac1/txcounters1/NibCnt_reg\[0\]/Q (SAEDRVT14_FDPRBQ_V2_0P5)   3.9362   0.0256   0.0349    0.0349 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/A\[0\] (eth_txcounters_DW01_inc_J17_1)                 0.0000     0.0349 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U55/A (SAEDHVT14_ADDH_0P5)                   0.0256    0.3228     0.3576 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U55/CO (SAEDHVT14_ADDH_0P5)        0.6752    0.0064    0.0172     0.3749 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U54/A (SAEDHVT14_ADDH_0P5)                   0.0064    0.1245     0.4994 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U54/CO (SAEDHVT14_ADDH_0P5)        0.6752    0.0064    0.0117     0.5111 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U53/A (SAEDHVT14_ADDH_0P5)                   0.0064    0.1245     0.6356 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U53/CO (SAEDHVT14_ADDH_0P5)        0.6752    0.0064    0.0117     0.6473 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U52/A (SAEDHVT14_ADDH_0P5)                   0.0064    0.1245     0.7719 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U52/CO (SAEDHVT14_ADDH_0P5)        0.6752    0.0064    0.0117     0.7836 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U51/A (SAEDHVT14_ADDH_0P5)                   0.0064    0.1245     0.9081 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U51/CO (SAEDHVT14_ADDH_0P5)        0.6752    0.0066    0.0117     0.9198 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U50/A (SAEDHVT14_ADDH_0P5)                   0.0066    0.1245     1.0444 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U50/CO (SAEDHVT14_ADDH_0P5)        0.6752    0.0065    0.0118     1.0561 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U49/A (SAEDHVT14_ADDH_0P5)                   0.0065    0.1245     1.1807 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U49/CO (SAEDHVT14_ADDH_0P5)        0.6752    0.0062    0.0117     1.1924 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U48/A (SAEDHVT14_ADDH_0P5)                   0.0062    0.1245     1.3169 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U48/CO (SAEDHVT14_ADDH_0P5)        0.6752    0.0062    0.0116     1.3285 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U47/A (SAEDHVT14_ADDH_0P5)                   0.0062    0.1245     1.4531 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U47/CO (SAEDHVT14_ADDH_0P5)        0.6752    0.0062    0.0116     1.4647 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U46/A (SAEDHVT14_ADDH_0P5)                   0.0062    0.1245     1.5892 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U46/CO (SAEDHVT14_ADDH_0P5)        0.6752    0.0062    0.0116     1.6008 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U45/A (SAEDHVT14_ADDH_0P5)                   0.0062    0.1245     1.7253 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U45/CO (SAEDHVT14_ADDH_0P5)        0.6752    0.0062    0.0116     1.7370 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U44/A (SAEDHVT14_ADDH_0P5)                   0.0062    0.1245     1.8615 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U44/CO (SAEDHVT14_ADDH_0P5)        0.6752    0.0062    0.0116     1.8731 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U56/A (SAEDHVT14_ADDH_0P5)                   0.0062    0.1245     1.9977 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U56/CO (SAEDHVT14_ADDH_0P5)        0.6752    0.0062    0.0116     2.0093 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U57/A (SAEDHVT14_ADDH_0P5)                   0.0062    0.1245     2.1338 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U57/CO (SAEDHVT14_ADDH_0P5)        0.5922    0.0056    0.0112     2.1450 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U58/A1 (SAEDHVT14_EO2_V1_0P75)               0.0056    0.1092     2.2542 r
+  u_eth_top/txethmac1/txcounters1/add_x_1/U58/X (SAEDHVT14_EO2_V1_0P75)      0.3082    0.0075    0.0090     2.2632 f
+  u_eth_top/txethmac1/txcounters1/add_x_1/SUM\[15\] (eth_txcounters_DW01_inc_J17_1)              0.0000     2.2632 f
+  u_eth_top/txethmac1/txcounters1/U109/A2 (SAEDHVT14_OA221_U_0P5)                      0.0075    0.0568     2.3201 f
+  u_eth_top/txethmac1/txcounters1/U109/X (SAEDHVT14_OA221_U_0P5)             0.2629    0.0055    0.0238     2.3439 f
+  u_eth_top/txethmac1/txcounters1/NibCnt_reg\[15\]/D (SAEDRVT14_FDPRBQ_V2_0P5)         0.0055    0.0485     2.3924 f
+  data arrival time                                                                                         2.3924
 
-  clock mtx_clk (rise edge)                                                                   40.0000    40.0000
-  clock network delay (ideal)                                                                  0.0000    40.0000
-  clock uncertainty                                                                           -0.1000    39.9000
-  u_eth_top/txethmac1/txcounters1/NibCnt_reg_15_/CK (SAEDRVT14_FDPRBQ_V2_0P5)                  0.0000    39.9000 r
-  library setup time                                                                          -0.0176    39.8824
-  data required time                                                                                     39.8824
-  -----------------------------------------------------------------------------------------------------------------
-  data required time                                                                                     39.8824
-  data arrival time                                                                                      -2.8678
-  -----------------------------------------------------------------------------------------------------------------
-  slack (MET)                                                                                            37.0146
+  clock mtx_clk (rise edge)                                                                     40.0000    40.0000
+  clock network delay (ideal)                                                                    0.0000    40.0000
+  clock uncertainty                                                                             -0.1000    39.9000
+  u_eth_top/txethmac1/txcounters1/NibCnt_reg\[15\]/CK (SAEDRVT14_FDPRBQ_V2_0P5)                  0.0000    39.9000 r
+  library setup time                                                                            -0.0175    39.8825
+  data required time                                                                                       39.8825
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       39.8825
+  data arrival time                                                                                        -2.3924
+  -------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              37.4901
 
 
 1

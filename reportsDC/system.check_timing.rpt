@@ -1,3 +1,4 @@
+Warning: Design 'system' has '5' unresolved references. For more detailed information, use the "link" command. (UID-341)
 
 Information: Checking generated_clocks...
 
@@ -8,7 +9,7 @@ Warning: There are 1 input ports have no clock_relative delay specified, the com
 
 Information: Checking unconstrained_endpoints...
 
-Warning: There are 4068 end-points which are not constrained for maximum delay.
+Warning: There are 3233 end-points which are not constrained for maximum delay.
 
 Information: Checking pulse_clock_cell_type...
 

@@ -1,9 +1,10 @@
+Warning: Design 'system' has '5' unresolved references. For more detailed information, use the "link" command. (UID-341)
  
 ****************************************
 Report : resources
 Design : system
 Version: X-2025.06-SP1
-Date   : Sat Nov 22 16:19:19 2025
+Date   : Mon Nov 24 14:09:45 2025
 ****************************************
 
 
@@ -18,30 +19,197 @@ Design : interrupt_controller_0
 ****************************************
 
 No implementations to report
+
+No resource sharing information to report.
  
 ****************************************
-Design : uart_0
+Design : a25_core_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : a25_write_back_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : a25_coprocessor_0
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : a25_wishbone_0
 ****************************************
 
 Resource Report for this hierarchy in file
-        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/system/uart.v
+        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_wishbone.v
 =============================================================================
 | Cell           | Module         | Parameters | Contained Operations       |
 =============================================================================
-| add_x_1        | DW01_inc       | width=5    | add_252 (uart.v:252)       |
-| add_x_2        | DW01_inc       | width=5    | add_257 (uart.v:257)       |
-| add_x_3        | DW01_inc       | width=5    | add_261 (uart.v:261)       |
-| sub_x_4        | DW01_dec       | width=5    | sub_263 (uart.v:263)       |
-| eq_x_5         | DW_cmp         | width=5    | eq_265 (uart.v:265)        |
-| eq_x_6         | DW_cmp         | width=5    | eq_266 (uart.v:266)        |
-| add_x_7        | DW01_inc       | width=24   | add_271 (uart.v:271)       |
-| lte_x_28       | DW_cmp         | width=5    | lte_344 (uart.v:344)       |
-| add_x_30       | DW01_inc       | width=5    | add_362 (uart.v:362)       |
-| add_x_31       | DW01_inc       | width=5    | add_368 (uart.v:368)       |
-| add_x_32       | DW01_inc       | width=5    | add_372 (uart.v:372)       |
-| sub_x_33       | DW01_dec       | width=5    | sub_376 (uart.v:376)       |
-| add_x_47       | DW01_inc       | width=10   | add_420 (uart.v:420)       |
-| add_x_53       | DW01_inc       | width=10   | add_546 (uart.v:546)       |
+| add_x_19       | DW01_inc       | width=2    | add_379 (a25_wishbone.v:379) |
+| add_x_20       | DW01_inc       | width=2    | add_389 (a25_wishbone.v:389) |
+| add_x_21       | DW01_inc       | width=2    | add_399 (a25_wishbone.v:399) |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_x_19           | DW01_inc         | apparch (area)     |                |
+| add_x_20           | DW01_inc         | apparch (area)     |                |
+| add_x_21           | DW01_inc         | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : a25_fetch_0
+****************************************
+
+Resource Report for this hierarchy in file
+        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_fetch.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| lt_x_1         | DW_cmp         | width=32   | lt_65_C163_C87_rn (memory_configuration.v:65) |
+| lt_x_2         | DW_cmp         | width=32   | lt_90_C163_C87_rn (memory_configuration.v:90) |
+| lt_x_3         | DW_cmp         | width=32   | lt_65_C82_C90_C163_C87_rn (memory_configuration.v:65) |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| lt_x_1             | DW_cmp           | apparch (area)     |                |
+| lt_x_2             | DW_cmp           | apparch (area)     |                |
+| lt_x_3             | DW_cmp           | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : a25_icache_0
+****************************************
+
+Resource Report for this hierarchy in file
+        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_icache.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| add_x_3        | DW01_inc       | width=9    | add_223 (a25_icache.v:223) |
+| ne_x_17        | DW_cmp         | width=32   | ne_324 (a25_icache.v:324)  |
+| add_x_18       | DW01_inc       | width=2    | add_331 (a25_icache.v:331) |
+| eq_x_21        | DW_cmp         | width=32   | eq_334 (a25_icache.v:334)  |
+| eq_x_26        | DW_cmp         | width=20   | eq_450 (a25_icache.v:450)  |
+| eq_x_27        | DW_cmp         | width=20   | eq_450_G2 (a25_icache.v:450) |
+| eq_x_28        | DW_cmp         | width=20   | eq_450_G3 (a25_icache.v:450) |
+| eq_x_29        | DW_cmp         | width=20   | eq_450_G4 (a25_icache.v:450) |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_x_3            | DW01_inc         | apparch (area)     |                |
+| ne_x_17            | DW_cmp           | apparch (area)     |                |
+| eq_x_21            | DW_cmp           | apparch (area)     |                |
+| eq_x_26            | DW_cmp           | apparch (area)     |                |
+| eq_x_27            | DW_cmp           | apparch (area)     |                |
+| eq_x_28            | DW_cmp           | apparch (area)     |                |
+| eq_x_29            | DW_cmp           | apparch (area)     |                |
+| add_x_18           | DW01_inc         | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : a25_mem_0
+****************************************
+
+Resource Report for this hierarchy in file
+        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_mem.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| lt_x_1         | DW_cmp         | width=32   | lt_65_C163_C114_rn (memory_configuration.v:65) |
+| lt_x_2         | DW_cmp         | width=32   | lt_90_C163_C114_rn (memory_configuration.v:90) |
+| lt_x_3         | DW_cmp         | width=32   | lt_65_C82_C90_C163_C114_rn (memory_configuration.v:65) |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| lt_x_1             | DW_cmp           | apparch (area)     |                |
+| lt_x_2             | DW_cmp           | apparch (area)     |                |
+| lt_x_3             | DW_cmp           | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : a25_execute_0
+****************************************
+
+Resource Report for this hierarchy in file
+        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_execute.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| add_x_8        | DW01_add       | width=32   | add_274 (a25_execute.v:274) |
+| sub_x_9        | DW01_sub       | width=26   | sub_275 (a25_execute.v:275) |
+| add_x_10       | DW01_add       | width=32   | add_276 (a25_execute.v:276) |
+| add_x_11       | DW01_add       | width=32   | add_277 (a25_execute.v:277) |
+| add_x_12       | DW01_add       | width=32   | add_278 (a25_execute.v:278) |
+| eq_x_25        | DW_cmp         | width=4    | eq_473 (a25_execute.v:473) |
+| eq_x_27        | DW_cmp         | width=4    | eq_474 (a25_execute.v:474) |
+| eq_x_29        | DW_cmp         | width=4    | eq_475 (a25_execute.v:475) |
+| eq_x_31        | DW_cmp         | width=4    | eq_476 (a25_execute.v:476) |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_x_8            | DW01_add         | apparch (area)     |                |
+| sub_x_9            | DW01_sub         | apparch (area)     |                |
+| add_x_10           | DW01_add         | apparch (area)     |                |
+| add_x_11           | DW01_add         | apparch (area)     |                |
+| add_x_12           | DW01_add         | apparch (area)     |                |
+| eq_x_25            | DW_cmp           | apparch (area)     |                |
+| eq_x_27            | DW_cmp           | apparch (area)     |                |
+| eq_x_29            | DW_cmp           | apparch (area)     |                |
+| eq_x_31            | DW_cmp           | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : a25_multiply_0
+****************************************
+
+Resource Report for this hierarchy in file
+        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_multiply.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| add_x_1        | DW01_inc       | width=34   | add_94 (a25_multiply.v:94) |
+| add_x_3        | DW01_add       | width=34   | add_145 (a25_multiply.v:145) |
+| add_x_4        | DW01_add       | width=33   | add_150 (a25_multiply.v:150) |
+| lte_x_5        | DW_cmp         | width=6    | lte_171 (a25_multiply.v:171) |
+| add_x_6        | DW01_inc       | width=6    | add_188 (a25_multiply.v:188) |
 =============================================================================
 
 
@@ -51,21 +219,54 @@ Implementation Report
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
 | add_x_1            | DW01_inc         | apparch (area)     |                |
-| add_x_2            | DW01_inc         | apparch (area)     |                |
-| add_x_3            | DW01_inc         | apparch (area)     |                |
-| sub_x_4            | DW01_dec         | apparch (area)     |                |
-| add_x_7            | DW01_inc         | apparch (area)     |                |
-| lte_x_28           | DW_cmp           | apparch (area)     |                |
-| add_x_30           | DW01_inc         | apparch (area)     |                |
-| add_x_31           | DW01_inc         | apparch (area)     |                |
-| add_x_32           | DW01_inc         | apparch (area)     |                |
-| sub_x_33           | DW01_dec         | apparch (area)     |                |
-| add_x_47           | DW01_inc         | apparch (area)     |                |
-| add_x_53           | DW01_inc         | apparch (area)     |                |
-| eq_x_5             | DW_cmp           | apparch (area)     |                |
-| eq_x_6             | DW_cmp           | apparch (area)     |                |
+| add_x_3            | DW01_add         | apparch (area)     |                |
+| add_x_4            | DW01_add         | apparch (area)     |                |
+| add_x_6            | DW01_inc         | apparch (area)     |                |
+| lte_x_5            | DW_cmp           | apparch (area)     |                |
 ===============================================================================
 
+ 
+****************************************
+Design : a25_alu_0
+****************************************
+
+Resource Report for this hierarchy in file
+        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_alu.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| add_x_7        | DW01_add       | width=33   | add_140 (a25_alu.v:140)    |
+|                |                |            | add_140_2 (a25_alu.v:140)  |
+| add_x_8        | DW01_add       | width=33   | add_140 (a25_alu.v:140)    |
+|                |                |            | add_140_2 (a25_alu.v:140)  |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_x_7            | DW01_add         | apparch (area)     |                |
+| add_x_8            | DW01_add         | apparch (area)     |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : a25_barrel_shift_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : a25_register_bank_0
+****************************************
+
+No implementations to report
  
 ****************************************
 Design : wishbone_arbiter
@@ -164,54 +365,6 @@ Implementation Report
 | sub_x_8            | DW01_dec         | apparch (area)     |                |
 | gt_x_3             | DW_cmp           | apparch (area)     |                |
 | gt_x_7             | DW_cmp           | apparch (area)     |                |
-===============================================================================
-
- 
-****************************************
-Design : uart_1
-****************************************
-
-Resource Report for this hierarchy in file
-        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/system/uart.v
-=============================================================================
-| Cell           | Module         | Parameters | Contained Operations       |
-=============================================================================
-| add_x_1        | DW01_inc       | width=5    | add_252 (uart.v:252)       |
-| add_x_2        | DW01_inc       | width=5    | add_257 (uart.v:257)       |
-| add_x_3        | DW01_inc       | width=5    | add_261 (uart.v:261)       |
-| sub_x_4        | DW01_dec       | width=5    | sub_263 (uart.v:263)       |
-| eq_x_5         | DW_cmp         | width=5    | eq_265 (uart.v:265)        |
-| eq_x_6         | DW_cmp         | width=5    | eq_266 (uart.v:266)        |
-| add_x_7        | DW01_inc       | width=24   | add_271 (uart.v:271)       |
-| lte_x_28       | DW_cmp         | width=5    | lte_344 (uart.v:344)       |
-| add_x_30       | DW01_inc       | width=5    | add_362 (uart.v:362)       |
-| add_x_31       | DW01_inc       | width=5    | add_368 (uart.v:368)       |
-| add_x_32       | DW01_inc       | width=5    | add_372 (uart.v:372)       |
-| sub_x_33       | DW01_dec       | width=5    | sub_376 (uart.v:376)       |
-| add_x_47       | DW01_inc       | width=10   | add_420 (uart.v:420)       |
-| add_x_53       | DW01_inc       | width=10   | add_546 (uart.v:546)       |
-=============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_x_1            | DW01_inc         | apparch (area)     |                |
-| add_x_2            | DW01_inc         | apparch (area)     |                |
-| add_x_3            | DW01_inc         | apparch (area)     |                |
-| sub_x_4            | DW01_dec         | apparch (area)     |                |
-| add_x_7            | DW01_inc         | apparch (area)     |                |
-| lte_x_28           | DW_cmp           | apparch (area)     |                |
-| add_x_30           | DW01_inc         | apparch (area)     |                |
-| add_x_31           | DW01_inc         | apparch (area)     |                |
-| add_x_32           | DW01_inc         | apparch (area)     |                |
-| sub_x_33           | DW01_dec         | apparch (area)     |                |
-| add_x_47           | DW01_inc         | apparch (area)     |                |
-| add_x_53           | DW01_inc         | apparch (area)     |                |
-| eq_x_5             | DW_cmp           | apparch (area)     |                |
-| eq_x_6             | DW_cmp           | apparch (area)     |                |
 ===============================================================================
 
 
@@ -748,31 +901,7 @@ Implementation Report
 No resource sharing information to report.
  
 ****************************************
-Design : eth_register_WIDTH1_RESET_VALUE0_0
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : eth_register_1_0_1
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : eth_register_5_00_0
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : eth_register_7_12_0
+Design : eth_register_8_40_0
 ****************************************
 
 No implementations to report
@@ -940,7 +1069,31 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : eth_register_8_40_0
+Design : eth_register_WIDTH1_RESET_VALUE0_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : eth_register_7_12_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : eth_register_1_0_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : eth_register_5_00_0
 ****************************************
 
 No implementations to report
@@ -1170,596 +1323,6 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : a25_core_0
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : a25_write_back_0
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : a25_wishbone_0
-****************************************
-
-Resource Report for this hierarchy in file
-        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_wishbone.v
-=============================================================================
-| Cell           | Module         | Parameters | Contained Operations       |
-=============================================================================
-| add_x_19       | DW01_inc       | width=2    | add_379 (a25_wishbone.v:379) |
-| add_x_20       | DW01_inc       | width=2    | add_389 (a25_wishbone.v:389) |
-| add_x_21       | DW01_inc       | width=2    | add_399 (a25_wishbone.v:399) |
-=============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_x_19           | DW01_inc         | apparch (area)     |                |
-| add_x_20           | DW01_inc         | apparch (area)     |                |
-| add_x_21           | DW01_inc         | apparch (area)     |                |
-===============================================================================
-
- 
-****************************************
-Design : a25_fetch_0
-****************************************
-
-Resource Report for this hierarchy in file
-        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_fetch.v
-=============================================================================
-| Cell           | Module         | Parameters | Contained Operations       |
-=============================================================================
-| lt_x_1         | DW_cmp         | width=32   | lt_65_C163_C87_rn (memory_configuration.v:65) |
-| lt_x_2         | DW_cmp         | width=32   | lt_90_C163_C87_rn (memory_configuration.v:90) |
-| lt_x_3         | DW_cmp         | width=32   | lt_65_C82_C90_C163_C87_rn (memory_configuration.v:65) |
-=============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| lt_x_1             | DW_cmp           | apparch (area)     |                |
-| lt_x_2             | DW_cmp           | apparch (area)     |                |
-| lt_x_3             | DW_cmp           | apparch (area)     |                |
-===============================================================================
-
- 
-****************************************
-Design : a25_icache_0
-****************************************
-
-Resource Report for this hierarchy in file
-        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_icache.v
-=============================================================================
-| Cell           | Module         | Parameters | Contained Operations       |
-=============================================================================
-| add_x_3        | DW01_inc       | width=9    | add_223 (a25_icache.v:223) |
-| ne_x_17        | DW_cmp         | width=32   | ne_324 (a25_icache.v:324)  |
-| add_x_18       | DW01_inc       | width=2    | add_331 (a25_icache.v:331) |
-| eq_x_21        | DW_cmp         | width=32   | eq_334 (a25_icache.v:334)  |
-| eq_x_26        | DW_cmp         | width=20   | eq_450 (a25_icache.v:450)  |
-| eq_x_27        | DW_cmp         | width=20   | eq_450_G2 (a25_icache.v:450) |
-| eq_x_28        | DW_cmp         | width=20   | eq_450_G3 (a25_icache.v:450) |
-| eq_x_29        | DW_cmp         | width=20   | eq_450_G4 (a25_icache.v:450) |
-=============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_x_3            | DW01_inc         | apparch (area)     |                |
-| ne_x_17            | DW_cmp           | apparch (area)     |                |
-| eq_x_21            | DW_cmp           | apparch (area)     |                |
-| eq_x_26            | DW_cmp           | apparch (area)     |                |
-| eq_x_27            | DW_cmp           | apparch (area)     |                |
-| eq_x_28            | DW_cmp           | apparch (area)     |                |
-| eq_x_29            | DW_cmp           | apparch (area)     |                |
-| add_x_18           | DW01_inc         | apparch (area)     |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : a25_coprocessor_0
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : a25_decode_0
-****************************************
-
-Resource Report for this hierarchy in file
-        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_decode.v
-=============================================================================
-| Cell           | Module         | Parameters | Contained Operations       |
-=============================================================================
-| eq_x_11        | DW_cmp         | width=4    | eq_530 (a25_decode.v:530)  |
-| eq_x_12        | DW_cmp         | width=4    | eq_531 (a25_decode.v:531)  |
-| eq_x_13        | DW_cmp         | width=4    | eq_532 (a25_decode.v:532)  |
-| eq_x_14        | DW_cmp         | width=4    | eq_533 (a25_decode.v:533)  |
-| eq_x_15        | DW_cmp         | width=4    | eq_534 (a25_decode.v:534)  |
-| eq_x_16        | DW_cmp         | width=4    | eq_535 (a25_decode.v:535)  |
-| eq_x_17        | DW_cmp         | width=4    | eq_536 (a25_decode.v:536)  |
-| eq_x_18        | DW_cmp         | width=4    | eq_537 (a25_decode.v:537)  |
-| eq_x_19        | DW_cmp         | width=4    | eq_539 (a25_decode.v:539)  |
-| eq_x_20        | DW_cmp         | width=4    | eq_540 (a25_decode.v:540)  |
-| eq_x_21        | DW_cmp         | width=4    | eq_541 (a25_decode.v:541)  |
-| eq_x_22        | DW_cmp         | width=4    | eq_542 (a25_decode.v:542)  |
-| ash_28         | DW_leftsh      | A_width=15 | sll_610 (a25_decode.v:610) |
-|                |                | SH_width=4 |                            |
-| gt_x_33        | DW_cmp         | width=5    | gt_972 (a25_decode.v:972)  |
-| ash_34         | DW_leftsh      | A_width=16 | sll_983 (a25_decode.v:983) |
-|                |                | SH_width=4 |                            |
-| gt_x_35        | DW_cmp         | width=5    | gt_1200 (a25_decode.v:1200) |
-| ne_x_36        | DW_cmp         | width=5    | ne_1204 (a25_decode.v:1204) |
-| gt_x_37        | DW_cmp         | width=5    | gt_1235 (a25_decode.v:1235) |
-| gt_x_38        | DW_cmp         | width=5    | gt_1240 (a25_decode.v:1240) |
-| eq_x_368       | DW_cmp         | width=5    | eq_1496_2 (a25_decode.v:1496) |
-| ne_x_369       | DW_cmp         | width=5    | ne_1549 (a25_decode.v:1549) |
-| ne_x_370       | DW_cmp         | width=5    | ne_1549_2 (a25_decode.v:1549) |
-| add_x_477      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_478      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_479      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_480      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_481      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_482      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_483      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_484      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_485      | DW01_add       | width=3    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_486      | DW01_add       | width=3    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_487      | DW01_add       | width=3    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_488      | DW01_add       | width=3    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_489      | DW01_add       | width=4    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_490      | DW01_add       | width=4    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_491      | DW01_add       | width=5    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-=============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| gt_x_33            | DW_cmp           | apparch (area)     |                |
-| add_x_491          | DW01_add         | apparch (area)     |                |
-| eq_x_11            | DW_cmp           | apparch (area)     |                |
-| eq_x_12            | DW_cmp           | apparch (area)     |                |
-| eq_x_13            | DW_cmp           | apparch (area)     |                |
-| eq_x_14            | DW_cmp           | apparch (area)     |                |
-| eq_x_15            | DW_cmp           | apparch (area)     |                |
-| eq_x_16            | DW_cmp           | apparch (area)     |                |
-| eq_x_17            | DW_cmp           | apparch (area)     |                |
-| eq_x_18            | DW_cmp           | apparch (area)     |                |
-| eq_x_19            | DW_cmp           | apparch (area)     |                |
-| eq_x_20            | DW_cmp           | apparch (area)     |                |
-| eq_x_21            | DW_cmp           | apparch (area)     |                |
-| eq_x_22            | DW_cmp           | apparch (area)     |                |
-| ash_28             | DW_leftsh        | astr (area)        |                |
-| ash_34             | DW_leftsh        | astr (area)        |                |
-| gt_x_35            | DW_cmp           | apparch (area)     |                |
-| ne_x_36            | DW_cmp           | apparch (area)     |                |
-| gt_x_37            | DW_cmp           | apparch (area)     |                |
-| gt_x_38            | DW_cmp           | apparch (area)     |                |
-| eq_x_368           | DW_cmp           | apparch (area)     |                |
-| ne_x_369           | DW_cmp           | apparch (area)     |                |
-| ne_x_370           | DW_cmp           | apparch (area)     |                |
-| add_x_477          | DW01_add         | apparch (area)     |                |
-| add_x_478          | DW01_add         | apparch (area)     |                |
-| add_x_479          | DW01_add         | apparch (area)     |                |
-| add_x_480          | DW01_add         | apparch (area)     |                |
-| add_x_481          | DW01_add         | apparch (area)     |                |
-| add_x_482          | DW01_add         | apparch (area)     |                |
-| add_x_483          | DW01_add         | apparch (area)     |                |
-| add_x_484          | DW01_add         | apparch (area)     |                |
-| add_x_485          | DW01_add         | apparch (area)     |                |
-| add_x_486          | DW01_add         | apparch (area)     |                |
-| add_x_487          | DW01_add         | apparch (area)     |                |
-| add_x_488          | DW01_add         | apparch (area)     |                |
-| add_x_489          | DW01_add         | apparch (area)     |                |
-| add_x_490          | DW01_add         | apparch (area)     |                |
-===============================================================================
-
- 
-****************************************
-Design : a25_execute_0
-****************************************
-
-Resource Report for this hierarchy in file
-        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_execute.v
-=============================================================================
-| Cell           | Module         | Parameters | Contained Operations       |
-=============================================================================
-| add_x_8        | DW01_add       | width=32   | add_274 (a25_execute.v:274) |
-| sub_x_9        | DW01_sub       | width=26   | sub_275 (a25_execute.v:275) |
-| add_x_10       | DW01_add       | width=32   | add_276 (a25_execute.v:276) |
-| add_x_11       | DW01_add       | width=32   | add_277 (a25_execute.v:277) |
-| add_x_12       | DW01_add       | width=32   | add_278 (a25_execute.v:278) |
-| eq_x_25        | DW_cmp         | width=4    | eq_473 (a25_execute.v:473) |
-| eq_x_27        | DW_cmp         | width=4    | eq_474 (a25_execute.v:474) |
-| eq_x_29        | DW_cmp         | width=4    | eq_475 (a25_execute.v:475) |
-| eq_x_31        | DW_cmp         | width=4    | eq_476 (a25_execute.v:476) |
-=============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_x_8            | DW01_add         | apparch (area)     |                |
-| sub_x_9            | DW01_sub         | apparch (area)     |                |
-| add_x_10           | DW01_add         | apparch (area)     |                |
-| add_x_11           | DW01_add         | apparch (area)     |                |
-| add_x_12           | DW01_add         | apparch (area)     |                |
-| eq_x_25            | DW_cmp           | apparch (area)     |                |
-| eq_x_27            | DW_cmp           | apparch (area)     |                |
-| eq_x_29            | DW_cmp           | apparch (area)     |                |
-| eq_x_31            | DW_cmp           | apparch (area)     |                |
-===============================================================================
-
- 
-****************************************
-Design : a25_multiply_0
-****************************************
-
-Resource Report for this hierarchy in file
-        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_multiply.v
-=============================================================================
-| Cell           | Module         | Parameters | Contained Operations       |
-=============================================================================
-| add_x_1        | DW01_inc       | width=34   | add_94 (a25_multiply.v:94) |
-| add_x_3        | DW01_add       | width=34   | add_145 (a25_multiply.v:145) |
-| add_x_4        | DW01_add       | width=33   | add_150 (a25_multiply.v:150) |
-| lte_x_5        | DW_cmp         | width=6    | lte_171 (a25_multiply.v:171) |
-| add_x_6        | DW01_inc       | width=6    | add_188 (a25_multiply.v:188) |
-=============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_x_1            | DW01_inc         | apparch (area)     |                |
-| add_x_3            | DW01_add         | apparch (area)     |                |
-| add_x_4            | DW01_add         | apparch (area)     |                |
-| add_x_6            | DW01_inc         | apparch (area)     |                |
-| lte_x_5            | DW_cmp           | apparch (area)     |                |
-===============================================================================
-
- 
-****************************************
-Design : a25_alu_0
-****************************************
-
-Resource Report for this hierarchy in file
-        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_alu.v
-=============================================================================
-| Cell           | Module         | Parameters | Contained Operations       |
-=============================================================================
-| add_x_7        | DW01_add       | width=33   | add_140 (a25_alu.v:140)    |
-|                |                |            | add_140_2 (a25_alu.v:140)  |
-| add_x_8        | DW01_add       | width=33   | add_140 (a25_alu.v:140)    |
-|                |                |            | add_140_2 (a25_alu.v:140)  |
-=============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_x_7            | DW01_add         | apparch (area)     |                |
-| add_x_8            | DW01_add         | apparch (area)     |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : a25_barrel_shift_0
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : a25_register_bank_0
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : a25_mem_0
-****************************************
-
-Resource Report for this hierarchy in file
-        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_mem.v
-=============================================================================
-| Cell           | Module         | Parameters | Contained Operations       |
-=============================================================================
-| lt_x_1         | DW_cmp         | width=32   | lt_65_C163_C114_rn (memory_configuration.v:65) |
-| lt_x_2         | DW_cmp         | width=32   | lt_90_C163_C114_rn (memory_configuration.v:90) |
-| lt_x_3         | DW_cmp         | width=32   | lt_65_C82_C90_C163_C114_rn (memory_configuration.v:65) |
-=============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| lt_x_1             | DW_cmp           | apparch (area)     |                |
-| lt_x_2             | DW_cmp           | apparch (area)     |                |
-| lt_x_3             | DW_cmp           | apparch (area)     |                |
-===============================================================================
-
- 
-****************************************
-Design : a25_dcache_0
-****************************************
-
-Resource Report for this hierarchy in file
-        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_dcache.v
-=============================================================================
-| Cell           | Module         | Parameters | Contained Operations       |
-=============================================================================
-| add_x_3        | DW01_inc       | width=9    | add_252 (a25_dcache.v:252) |
-| eq_x_24        | DW_cmp         | width=28   | eq_402 (a25_dcache.v:402)  |
-| add_x_25       | DW01_inc       | width=2    | add_412 (a25_dcache.v:412) |
-| eq_x_28        | DW_cmp         | width=32   | eq_415 (a25_dcache.v:415)  |
-| eq_x_37        | DW_cmp         | width=20   | eq_655 (a25_dcache.v:655)  |
-| eq_x_38        | DW_cmp         | width=20   | eq_655_G2 (a25_dcache.v:655) |
-| eq_x_39        | DW_cmp         | width=20   | eq_655_G3 (a25_dcache.v:655) |
-| eq_x_40        | DW_cmp         | width=20   | eq_655_G4 (a25_dcache.v:655) |
-=============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_x_3            | DW01_inc         | apparch (area)     |                |
-| eq_x_24            | DW_cmp           | apparch (area)     |                |
-| eq_x_28            | DW_cmp           | apparch (area)     |                |
-| eq_x_37            | DW_cmp           | apparch (area)     |                |
-| eq_x_38            | DW_cmp           | apparch (area)     |                |
-| eq_x_39            | DW_cmp           | apparch (area)     |                |
-| eq_x_40            | DW_cmp           | apparch (area)     |                |
-| add_x_25           | DW01_inc         | apparch (area)     |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
 Design : a25_core_1
 ****************************************
 
@@ -1830,42 +1393,6 @@ Implementation Report
 | lt_x_1             | DW_cmp           | apparch (area)     |                |
 | lt_x_2             | DW_cmp           | apparch (area)     |                |
 | lt_x_3             | DW_cmp           | apparch (area)     |                |
-===============================================================================
-
- 
-****************************************
-Design : a25_dcache_1
-****************************************
-
-Resource Report for this hierarchy in file
-        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_dcache.v
-=============================================================================
-| Cell           | Module         | Parameters | Contained Operations       |
-=============================================================================
-| add_x_3        | DW01_inc       | width=9    | add_252 (a25_dcache.v:252) |
-| eq_x_24        | DW_cmp         | width=28   | eq_402 (a25_dcache.v:402)  |
-| add_x_25       | DW01_inc       | width=2    | add_412 (a25_dcache.v:412) |
-| eq_x_28        | DW_cmp         | width=32   | eq_415 (a25_dcache.v:415)  |
-| eq_x_37        | DW_cmp         | width=20   | eq_655 (a25_dcache.v:655)  |
-| eq_x_38        | DW_cmp         | width=20   | eq_655_G2 (a25_dcache.v:655) |
-| eq_x_39        | DW_cmp         | width=20   | eq_655_G3 (a25_dcache.v:655) |
-| eq_x_40        | DW_cmp         | width=20   | eq_655_G4 (a25_dcache.v:655) |
-=============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_x_3            | DW01_inc         | apparch (area)     |                |
-| eq_x_24            | DW_cmp           | apparch (area)     |                |
-| eq_x_28            | DW_cmp           | apparch (area)     |                |
-| eq_x_37            | DW_cmp           | apparch (area)     |                |
-| eq_x_38            | DW_cmp           | apparch (area)     |                |
-| eq_x_39            | DW_cmp           | apparch (area)     |                |
-| eq_x_40            | DW_cmp           | apparch (area)     |                |
-| add_x_25           | DW01_inc         | apparch (area)     |                |
 ===============================================================================
 
  
@@ -1978,312 +1505,6 @@ Design : a25_barrel_shift_1
 ****************************************
 
 No implementations to report
- 
-****************************************
-Design : a25_decode_1
-****************************************
-
-Resource Report for this hierarchy in file
-        /home/JUNIOR.RUIZ/ie0411/proyecto/rtl/amber25/a25_decode.v
-=============================================================================
-| Cell           | Module         | Parameters | Contained Operations       |
-=============================================================================
-| eq_x_11        | DW_cmp         | width=4    | eq_530 (a25_decode.v:530)  |
-| eq_x_12        | DW_cmp         | width=4    | eq_531 (a25_decode.v:531)  |
-| eq_x_13        | DW_cmp         | width=4    | eq_532 (a25_decode.v:532)  |
-| eq_x_14        | DW_cmp         | width=4    | eq_533 (a25_decode.v:533)  |
-| eq_x_15        | DW_cmp         | width=4    | eq_534 (a25_decode.v:534)  |
-| eq_x_16        | DW_cmp         | width=4    | eq_535 (a25_decode.v:535)  |
-| eq_x_17        | DW_cmp         | width=4    | eq_536 (a25_decode.v:536)  |
-| eq_x_18        | DW_cmp         | width=4    | eq_537 (a25_decode.v:537)  |
-| eq_x_19        | DW_cmp         | width=4    | eq_539 (a25_decode.v:539)  |
-| eq_x_20        | DW_cmp         | width=4    | eq_540 (a25_decode.v:540)  |
-| eq_x_21        | DW_cmp         | width=4    | eq_541 (a25_decode.v:541)  |
-| eq_x_22        | DW_cmp         | width=4    | eq_542 (a25_decode.v:542)  |
-| ash_28         | DW_leftsh      | A_width=15 | sll_610 (a25_decode.v:610) |
-|                |                | SH_width=4 |                            |
-| gt_x_33        | DW_cmp         | width=5    | gt_972 (a25_decode.v:972)  |
-| ash_34         | DW_leftsh      | A_width=16 | sll_983 (a25_decode.v:983) |
-|                |                | SH_width=4 |                            |
-| gt_x_35        | DW_cmp         | width=5    | gt_1200 (a25_decode.v:1200) |
-| ne_x_36        | DW_cmp         | width=5    | ne_1204 (a25_decode.v:1204) |
-| gt_x_37        | DW_cmp         | width=5    | gt_1235 (a25_decode.v:1235) |
-| gt_x_38        | DW_cmp         | width=5    | gt_1240 (a25_decode.v:1240) |
-| eq_x_368       | DW_cmp         | width=5    | eq_1496_2 (a25_decode.v:1496) |
-| ne_x_369       | DW_cmp         | width=5    | ne_1549 (a25_decode.v:1549) |
-| ne_x_370       | DW_cmp         | width=5    | ne_1549_2 (a25_decode.v:1549) |
-| add_x_477      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_478      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_479      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_480      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_481      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_482      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_483      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_484      | DW01_add       | width=2    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_485      | DW01_add       | width=3    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_486      | DW01_add       | width=3    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_487      | DW01_add       | width=3    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_488      | DW01_add       | width=3    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_489      | DW01_add       | width=4    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_490      | DW01_add       | width=4    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-| add_x_491      | DW01_add       | width=5    | add_654 (a25_decode.v:654) |
-|                |                |            | add_654_10 (a25_decode.v:654) |
-              |                |            | add_654_11 (a25_decode.v:654) |
-              |                |            | add_654_12 (a25_decode.v:654) |
-              |                |            | add_654_13 (a25_decode.v:654) |
-              |                |            | add_654_14 (a25_decode.v:654) |
-              |                |            | add_654_15 (a25_decode.v:654) |
-              |                |            | add_654_2 (a25_decode.v:654) |
-               |                |            | add_654_3 (a25_decode.v:654) |
-               |                |            | add_654_4 (a25_decode.v:654) |
-               |                |            | add_654_5 (a25_decode.v:654) |
-               |                |            | add_654_6 (a25_decode.v:654) |
-               |                |            | add_654_7 (a25_decode.v:654) |
-               |                |            | add_654_8 (a25_decode.v:654) |
-               |                |            | add_654_9 (a25_decode.v:654) |
-=============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| gt_x_33            | DW_cmp           | apparch (area)     |                |
-| add_x_491          | DW01_add         | apparch (area)     |                |
-| eq_x_11            | DW_cmp           | apparch (area)     |                |
-| eq_x_12            | DW_cmp           | apparch (area)     |                |
-| eq_x_13            | DW_cmp           | apparch (area)     |                |
-| eq_x_14            | DW_cmp           | apparch (area)     |                |
-| eq_x_15            | DW_cmp           | apparch (area)     |                |
-| eq_x_16            | DW_cmp           | apparch (area)     |                |
-| eq_x_17            | DW_cmp           | apparch (area)     |                |
-| eq_x_18            | DW_cmp           | apparch (area)     |                |
-| eq_x_19            | DW_cmp           | apparch (area)     |                |
-| eq_x_20            | DW_cmp           | apparch (area)     |                |
-| eq_x_21            | DW_cmp           | apparch (area)     |                |
-| eq_x_22            | DW_cmp           | apparch (area)     |                |
-| ash_28             | DW_leftsh        | astr (area)        |                |
-| ash_34             | DW_leftsh        | astr (area)        |                |
-| gt_x_35            | DW_cmp           | apparch (area)     |                |
-| ne_x_36            | DW_cmp           | apparch (area)     |                |
-| gt_x_37            | DW_cmp           | apparch (area)     |                |
-| gt_x_38            | DW_cmp           | apparch (area)     |                |
-| eq_x_368           | DW_cmp           | apparch (area)     |                |
-| ne_x_369           | DW_cmp           | apparch (area)     |                |
-| ne_x_370           | DW_cmp           | apparch (area)     |                |
-| add_x_477          | DW01_add         | apparch (area)     |                |
-| add_x_478          | DW01_add         | apparch (area)     |                |
-| add_x_479          | DW01_add         | apparch (area)     |                |
-| add_x_480          | DW01_add         | apparch (area)     |                |
-| add_x_481          | DW01_add         | apparch (area)     |                |
-| add_x_482          | DW01_add         | apparch (area)     |                |
-| add_x_483          | DW01_add         | apparch (area)     |                |
-| add_x_484          | DW01_add         | apparch (area)     |                |
-| add_x_485          | DW01_add         | apparch (area)     |                |
-| add_x_486          | DW01_add         | apparch (area)     |                |
-| add_x_487          | DW01_add         | apparch (area)     |                |
-| add_x_488          | DW01_add         | apparch (area)     |                |
-| add_x_489          | DW01_add         | apparch (area)     |                |
-| add_x_490          | DW01_add         | apparch (area)     |                |
-===============================================================================
-
  
 ****************************************
 Design : a25_fetch_1

@@ -1,10 +1,11 @@
+Warning: Design 'system' has '5' unresolved references. For more detailed information, use the "link" command. (UID-341)
  
 ****************************************
 Report : threshold voltage group
         -analysis_effort low
 Design : system
 Version: X-2025.06-SP1
-Date   : Sat Nov 22 16:19:14 2025
+Date   : Mon Nov 24 14:09:40 2025
 ****************************************
 
 ********************************************************************************
@@ -19,19 +20,19 @@ Warning: Design has unannotated black box outputs. (PWR-428)
 Vth Group                All                Blackbox           Non-blackbox
 Name                    cells                cells                cells
 ********************************************************************************
-undefined           54309 (100.00%)         25 (100.00%)      54284 (100.00%)   
+undefined           38661 (100.00%)         23 (100.00%)      38638 (100.00%)   
 ********************************************************************************
 
 Vth Group                All                Blackbox           Non-blackbox
 Name                  cell area            cell area            cell area
 ********************************************************************************
-undefined        93071.17 (100.00%)   66715.88 (100.00%)   26355.29 (100.00%)   
+undefined        66911.22 (100.00%)   45366.80 (100.00%)   21544.42 (100.00%)   
 ********************************************************************************
 
 Vth Group                All                Blackbox           Non-blackbox
 Name                 cell leakage        cell leakage          cell leakage
 ********************************************************************************
-undefined       997.620uW (100.00%)    1.241uW (100.00%)  996.378uW (100.00%)   
+undefined       990.761uW (100.00%)  844.169nW (100.00%)  989.917uW (100.00%)   
 ********************************************************************************
 
 1
