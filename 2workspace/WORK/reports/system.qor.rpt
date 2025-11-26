@@ -1,0 +1,112 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'system' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : qor
+Design : system
+Version: X-2025.06-SP1
+Date   : Mon Nov 24 23:40:30 2025
+****************************************
+
+
+  Timing Path Group 'BRD_CLK_P'
+  -----------------------------------
+  Levels of Logic:            73.0000
+  Critical Path Length:        6.0077
+  Critical Path Slack:        -3.0131
+  Critical Path Clk Period:    3.0000
+  Total Negative Slack:    -8731.5752
+  No. of Violating Paths:   4227.0000
+  Worst Hold Violation:        0.0000
+  Total Hold Violation:        0.0000
+  No. of Hold Violations:      0.0000
+  -----------------------------------
+
+  Timing Path Group 'mrx_clk'
+  -----------------------------------
+  Levels of Logic:            26.0000
+  Critical Path Length:        3.7844
+  Critical Path Slack:        36.1025
+  Critical Path Clk Period:   40.0000
+  Total Negative Slack:        0.0000
+  No. of Violating Paths:      0.0000
+  Worst Hold Violation:       -0.0289
+  Total Hold Violation:       -0.4541
+  No. of Hold Violations:     23.0000
+  -----------------------------------
+
+  Timing Path Group 'mtx_clk'
+  -----------------------------------
+  Levels of Logic:            16.0000
+  Critical Path Length:        2.6392
+  Critical Path Slack:        37.2433
+  Critical Path Clk Period:   40.0000
+  Total Negative Slack:        0.0000
+  No. of Violating Paths:      0.0000
+  Worst Hold Violation:       -0.0278
+  Total Hold Violation:       -0.4046
+  No. of Hold Violations:     20.0000
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:        282
+  Hierarchical Port Count:      21259
+  Leaf Cell Count:              51287
+  Buf/Inv Cell Count:            8895
+  Buf Cell Count:                2773
+  Inv Cell Count:                6173
+  CT Buf/Inv Cell Count:            1
+  Combinational Cell Count:     42965
+  Sequential Cell Count:         8322
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:      13063.7231
+  Noncombinational Area:   12609.4051
+  Buf/Inv Area:             1880.5620
+  Total Buffer Area:         791.5188
+  Total Inverter Area:      1147.9176
+  Macro/Black Box Area:    66715.8813
+  Net Area:                58072.5363
+  -----------------------------------
+  Cell Area:               92389.0096
+  Design Area:            150461.5459
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         53690
+  Nets With Violations:             2
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  Max Fanout Violations:            2
+  -----------------------------------
+
+
+  Hostname: merry
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                 11.8094
+  Logic Optimization:               47.6181
+  Mapping Optimization:            242.8069
+  -----------------------------------------
+  Overall Compile Time:            560.1650
+  Overall Compile Wall Clock Time: 580.4174
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 3.0131  TNS: 8731.5752  Number of Violating Paths: 4227
+
+
+  Design (Hold)  WNS: 0.0289  TNS: 0.8586  Number of Violating Paths: 43
+
+  --------------------------------------------------------------------
+
+
+1
