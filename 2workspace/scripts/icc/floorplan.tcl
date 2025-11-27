@@ -8,16 +8,17 @@
 # INICIALIZACIÓN DE LA FORMA
 initialize_floorplan \
   -flip_first_row true \
-  -boundary {{0 0} {410 504}} \
+  -boundary {{0 0} {540 504}} \
   -core_offset {15 15 15 15}
 
-    set all_macros [get_cells -hierarchical -filter "is_hard_macro==true"]
-    if {[sizeof_collection $all_macros] > 0} {
-        puts "--> Liberando [sizeof_collection $all_macros] macros para posicionamiento automático..."
-        set_attribute -objects $all_macros -name is_fixed -value false
-        set_attribute -objects $all_macros -name is_placed -value false
-        set_attribute -objects $all_macros -name orientation -value R0
-    }
+rotate_objects [get_cells u_iobuf/IO_tri] -angle CW90 -force
+
+set all_macros [get_cells -hierarchical -filter "is_hard_macro==true"]
+if {[sizeof_collection $all_macros] > 0} {
+    puts "--> Liberando [sizeof_collection $all_macros] macros para posicionamiento automático..."
+    set_attribute -objects $all_macros -name is_fixed -value false
+    set_attribute -objects $all_macros -name is_placed -value false
+}
 
 ##########################################################################################
 # POSICIONAMIENTO DE SRAMS
