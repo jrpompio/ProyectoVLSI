@@ -114,36 +114,32 @@ save_block -as ${DESIGN}_3_post_power
 ##########################################################################################
 # POSICIONAMIENTO
 ##########################################################################################
-source ${SCRIPTS_DIR}/icc/placement.tcl
-save_block -as ${DESIGN}_4_post_place
+#source ${SCRIPTS_DIR}/icc/placement.tcl
+#save_block -as ${DESIGN}_4_post_place
 
 ##########################################################################################
 # SÍNTESIS DE ÁRBOL DE RELOJ
 ##########################################################################################
-source ${SCRIPTS_DIR}/icc/cts.tcl
-save_block -as ${DESIGN}_5_post_cts
+#source ${SCRIPTS_DIR}/icc/cts.tcl
+#save_block -as ${DESIGN}_5_post_cts
 
 ##########################################################################################
 # ENRUTAMIENTO
 ##########################################################################################
-source ${SCRIPTS_DIR}/icc/routing.tcl
-save_block -as ${DESIGN}_6_post_route
+#source ${SCRIPTS_DIR}/icc/routing.tcl
+#save_block -as ${DESIGN}_6_post_route
 
 ##########################################################################################
 # ECO
 ##########################################################################################
-source ${SCRIPTS_DIR}/icc/eco.tcl
-save_block -as ${DESIGN}_7_post_eco
+#source ${SCRIPTS_DIR}/icc/eco.tcl
+#save_block -as ${DESIGN}_7_post_eco
 
 ##########################################################################################
 # GENERACIÓN DE RESULTADOS
 #########################################################################################
-source ${SCRIPTS_DIR}/icc/dump_results.tcl
+#source ${SCRIPTS_DIR}/icc/dump_results.tcl
 
-set macros [get_cells -hierarchical -filter "is_hard_macro == true"]
-set cantidad_macros [sizeof_collection $macros]
-puts "Número de Hard Macros (SRAMs): $cantidad_macros"
 report_utilization
 
 
-sh (bot_alert 'ICC Terminado')
